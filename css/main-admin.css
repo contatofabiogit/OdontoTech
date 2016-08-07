@@ -1,0 +1,111 @@
+.container {
+    font-family: "Century Gothic";
+    max-width: 100%;
+    box-shadow: -10px 10px 20px #A7A5A0;
+}
+
+header {
+    font-size: 27px;
+    color: #FFFFFF;
+    padding-top: 10px;
+    background-color: #5D93CD;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.topo {
+    background-color: #5D93CD;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.mdl-textfield__expandable-holder {
+    color: #FFFFFF;
+}
+
+.cadastrar {
+    max-width: 100px;
+}
+
+.cadastrar:hover{
+    max-width: 100px;
+}
+
+.buscar {
+    max-width: 100px;
+    padding-top: 10px;
+}
+
+.receita {
+    max-width: 100px;
+    padding-top: 10px;
+}
+
+.agendar {
+    max-width: 100px;
+    padding-top: 10px;
+}
+
+.relatorio {
+    max-width: 100px;
+    padding-top: 10px;
+}
+
+.procedimento {
+    max-width: 100px;
+    padding-top: 10px;
+}
+
+.cabecalho div {
+    margin-left: 10px;
+}
+
+.logoCanto {
+    text-align: right;
+}
+
+.material-icons {
+    color: #FFFFFF;
+}
+
+.rodape {
+    background-color: #5D93CD;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    padding: 5px;
+}
+
+.rodape a {
+    color: #FFFFFF;
+}
+
+
+/* centered columns styles */
+
+.row-centered {
+    text-align: center;
+}
+
+.col-centered {
+    display: inline-block;
+    float: none;
+    /* reset the text-align */
+    text-align: left;
+    /* inline-block space fix */
+    margin-right: -4px;
+}
+
+.col-fixed {
+    /* custom width */
+    width: 320px;
+}
+
+.col-min {
+    /* custom min width */
+    min-width: 320px;
+}
+
+.col-max {
+    /* custom max width */
+    max-width: 320px;
+}

@@ -1,0 +1,79 @@
+.glyphicon {
+    font-size: 15px;
+    color: #000000;
+}
+
+div a {
+    color: #5D93CD;
+}
+
+div a:hover{
+    color: #FF0000;
+}
+
+.esqueceSenha{
+    text-align: center;    
+}
+
+
+body {
+    background-color: #AEC9E6;
+}
+
+.cabecalho {
+    background-color: #5D93CD;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    height: 40px;
+    padding: 10px;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.mensagem{
+    background: red;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+.entrada{
+    max-width: 300px;
+    padding-bottom: 20px;
+}
+
+.logoLogin {
+    text-align: center;
+}
+
+.container {
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+
+.formulario {
+    background: #FFFFFF;
+    border-radius: 15px;
+    max-width: 365px;
+    box-shadow: -12px 12px 25px #000000;
+}
+
+.row {
+    margin: 0 auto;
+}
+
+.iconInput {
+    position: relative;
+}
+
+.iconInput input {
+    padding-left: 28px;
+}
+
+.iconInput i {
+    position: absolute;
+    padding: 9px 10px;
+}

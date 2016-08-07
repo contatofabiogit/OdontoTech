@@ -1,0 +1,30 @@
+Comandos básicos do git:
+git config --global user.name "Coloque seu nome"
+git config --global user.email "Coloque seu e-mail"
+
+git init
+
+Adicionar arquivos no índice (pode verificar com 'git status')
+git add .
+git commit -m "mensagem"
+
+Criar link para repositório remoto:
+git remote add origin https://link_do_seu_projeto_no_github.com
+
+Mandar código para o repositório remoto:
+git push -u origin master
+
+Baixar atualizações da equipe:
+git pull origin master
+
+criar novo branch:
+git checkout -b develop
+
+Criar versão:
+git tag v1.0.0
+
+fazer merge do código do develop para o master (é preciso estar no branch master):
+git merge develop
+
+Verificar os commits:
+git log

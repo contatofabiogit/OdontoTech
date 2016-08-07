@@ -1,0 +1,24 @@
+.home,
+.salvar,
+.cancelar,
+.limpar {
+    max-width: 50px;
+    padding-top: 10px;
+}
+
+.home a,
+.salvar a,
+.cancelar a,
+.limpar a{
+    color: #000000;
+}
+
+.btn{
+    background: #FFFFFF;
+    border: solid 0px #FFFFFF;
+}
+
+button .opcao a{
+    color: #FFFFFF;
+    
+}
