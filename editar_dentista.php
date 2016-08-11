@@ -1,3 +1,14 @@
+<?php
+$id = $_GET['id'];
+
+//Executando consulta sql
+$result1 = mysql_query("SELECT * FROM pessoa WHERE id_pessoa='$id' LIMIT 1");
+$result2 = mysql_query("SELECT * FROM dentista WHERE pessoa_id_pessoa='$id' LIMIT 1");
+
+$resultado1 = mysql_fetch_assoc($result1);
+$resultado2 = mysql_fetch_assoc($result2);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,7 +23,7 @@
         <link rel="stylesheet" href="css/main-admin.css">
         <link rel="stylesheet" href="css/main-hover.css">
         <link rel="stylesheet" href="css/cadastrar-dentista.css">
-
+        
         <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -33,76 +44,93 @@
     <body>
         <div class="container">
             <br>
-            <header>Sistema Odontológico - Cadastrar Dentista</header>
+            <header>Sistema Odontológico - Editar Dentista</header>
             <?php
             include_once './padroes/cabecalho_body.php';
             ?>
 
             <br>
-            <form method="POST" action="processamento/cd_dentista.php">
+            <form method="POST" action="processamento/ed_dentista.php">
+
                 <div class="row form-group text-left">
                     <div class="form-group text-left col-md-6">
                         <label>Nome Completo</label>
                         <br>
-                        <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" />
+                        <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" value="<?php echo $resultado1['nome']; ?>" />
                     </div>
                     <div class="form-group text-left col-md-3">
                         <label name="cro">CRO</label>
                         <br>
-                        <input type="text" name="cro" class="form-control" id="cro" placeholder="CRO" />
+                        <input type="text" name="cro" class="form-control" id="cro" placeholder="CRO" value="<?php echo $resultado2['cro']; ?>" />
                     </div>
                     <div class="form-group text-left col-md-3">
                         <label name="especializacao">Especialização</label>
                         <br>
-                        <input type="text" class="form-control" name="especializacao" id="especializacao" placeholder="Especialização" />
+                        <input type="text" class="form-control" name="especializacao" id="especializacao" placeholder="Especialização" value="<?php echo $resultado2['especializacao']; ?>" />
                     </div>
                     <div class="form-group text-left col-md-3">
                         <label name="login">Login</label>
                         <br>
-                        <input type="text" class="form-control" name="login" id="login" placeholder="Login" />
+                        <input type="text" class="form-control" name="login" id="login" placeholder="Login" value="<?php echo $resultado1['login']; ?>" />
                     </div>
                     <div class="form-group text-left col-md-3">
                         <label name="senha">Senha</label>
                         <br>
-                        <input type="text" class="form-control" name="senha" id="senha" placeholder="Senha" />
+                        <input type="text" class="form-control" name="senha" id="senha" placeholder="Senha" value="<?php echo $resultado1['senha']; ?>" />
                     </div>
                     <div class="form-group text-left col-md-4">
                         <label name="telefone">Telefone</label>
                         <br>
-                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" />
+                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" value="<?php echo $resultado1['telefone']; ?>" />
                     </div>
                     <div class="form-group text-left col-md-2">
                         <label name="text">Sexo</label>
                         <br>
-                        <select class="form-control" id="sexo" name="sexo">
+                        <select class="form-control" id="sexo" name="sexo" value="<?php echo $resultado1['sexo']; ?>">
                             <option>Selecione</option>
-                            <option value="M">M</option>
-                            <option value="F">F</option>
+                            <option value="M"
+
+                                    <?php
+                                    if ($resultado1['sexo'] == 'M') {
+                                        echo 'Selected';
+                                    }
+                                    ?>
+
+                                    >Masculino</option>
+                            <option value="F"
+
+                                    <?php
+                                    if ($resultado1['sexo'] == 'F') {
+                                        echo 'Selected';
+                                    }
+                                    ?>
+
+                                    >Feminino</option>
                         </select>
                     </div>
 
                     <div class="form-group text-left col-md-3">
                         <label name="rg">RG</label>
                         <br>
-                        <input type="text" class="form-control" name="rg" id="rg" placeholder="RG" size="20" />
+                        <input type="text" class="form-control" name="rg" id="rg" placeholder="RG" size="20" value="<?php echo $resultado1['rg']; ?>" />
                     </div>
 
                     <div class="form-group text-left col-md-3">
                         <label name="cpf">CPF</label>
                         <br>
-                        <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF" size="20" />
+                        <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF" size="20" value="<?php echo $resultado1['cpf']; ?>" />
                     </div>
 
                     <div class="form-group text-left col-md-3">
                         <label name="dt_nascimento">Data de Nascimento</label>
                         <br>
-                        <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento"/>
+                        <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" value="<?php echo $resultado1['dt_nascimento']; ?>" />
                     </div>
 
                     <div class="form-group text-left col-md-3">
                         <label name="nivelacesso">Nível de Acesso</label>
                         <br>
-                        <select class='form-control' data-size='5' id='nivelacesso' name='nivelacesso'>
+                        <select class='form-control' data-size='5' id='nivelacesso' name='nivelacesso' value="<?php echo $resultado1['nivel_acesso']; ?>">
                             <option value='Dentista'>Dentista</option>
                         </select>
                     </div>
@@ -110,8 +138,10 @@
                     <div class="form-group text-left col-md-6">
                         <label name="email">E-mail</label>
                         <br>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" />
+                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="<?php echo $resultado1['email']; ?>" />
                     </div>
+
+                    <input type="hidden" name="id" value="<?php echo $resultado1['id_pessoa']; ?>" />
 
                 </div>
                 <div class="row">
@@ -124,7 +154,7 @@
                     <div class="salvarPrincipal col-md-6 text-center">
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="processamento/cadastro-dentista.php" type="submit" class="hvr-float-shadow"><img src="images/botao-salvar-render.png" class="salvar">
+                                <a href="administrativo.php?link=3" type="submit" class="hvr-float-shadow"><img src="images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>

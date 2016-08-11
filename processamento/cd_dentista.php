@@ -24,6 +24,6 @@ $query2 = mysql_query("INSERT INTO dentista VALUES ('', '$cro', '$especializacao
 
 
 if (mysql_affected_rows() != 0) {
-    header("Location: ../buscar-dentista.php");
+    header("Location: ../administrativo.php?link=3");
 }
 ?>
