@@ -10,7 +10,7 @@ $pag[1] = 'main-admin.php';
 $pag[2] = 'cadastrar-dentista.php';
 $pag[3] = 'buscar-dentista.php';
 $pag[4] = 'editar_dentista.php';
-$pag[5] = 'visualiza_dentista.php';
+$pag[5] = 'visualizar_dentista.php';
 
 if (!empty($link)) {
     if (file_exists($pag[$link])) {
