@@ -19,10 +19,24 @@ $dt_nascimeto = $_POST["dt_nascimento"];
 $email = $_POST['email'];
 $nivelacesso = $_POST['nivelacesso'];
 
-$query1 = mysql_query("UPDATE pessoa SET nome = '$nome', login = '$login', senha = '$senha', telefone = '$telefone', sexo = '$sexo', rg = '$rg',"
-        . "cpf = '$cpf', dt_nascimento = '$dt_nascimeto', email = '$email', nivel_acesso = '$nivelacesso' WHERE id_pessoa = '$id'");
+$sql = "SELECT id_pessoa FROM pessoa WHERE id_pessoa='$id'";
 
-$query2 = mysql_query("UPDATE dentista SET cro = '$cro', especializacao = '$especializacao' WHERE pessoa_id_pessoa = '$id'");
- 
+
+//$query1 = mysql_query("UPDATE pessoa SET nome = '$nome', login = '$login', senha = '$senha', telefone = '$telefone', sexo = '$sexo', rg = '$rg',"
+//        . "cpf = '$cpf', dt_nascimento = '$dt_nascimeto', email = '$email', nivel_acesso = '$nivelacesso' WHERE id_pessoa = '$id'");
+//$query2 = mysql_query("UPDATE dentista SET cro = '$cro', especializacao = '$especializacao' WHERE pessoa_id_pessoa = '$id'");
+
+$teste1 = "SELECT id FROM pessoa";
+$teste2 = "SELECT pessoa_id_pessoa FROM pessoa";
+
+if (mysql(teste)) {
+    $query1 = mysql_query("DELETE FROM pessoa WHERE id_pessoa = '$id'");
+
+    $query2 = mysql_query("DELETE FROM dentista WHERE pessoa_id_pessoa = '$id'");
+}
+
+//$query2 = mysql_query("INSERT INTO dentista VALUES ('', '$cro', '$especializacao', LAST_INSERT_ID())");
+if (mysql_affected_rows() != 0) {
     header("Location: ../administrativo.php?link=3");
+}
 ?>

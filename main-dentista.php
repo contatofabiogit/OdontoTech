@@ -1,9 +1,3 @@
-<?php
-session_start();
-include_once("./processamento/seguranca.php");
-include_once("./processamento/conexao.php");
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 

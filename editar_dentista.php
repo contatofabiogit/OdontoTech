@@ -23,7 +23,7 @@ $resultado2 = mysql_fetch_assoc($result2);
         <link rel="stylesheet" href="css/main-admin.css">
         <link rel="stylesheet" href="css/main-hover.css">
         <link rel="stylesheet" href="css/cadastrar-dentista.css">
-        
+
         <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -78,7 +78,7 @@ $resultado2 = mysql_fetch_assoc($result2);
                         <br>
                         <input type="text" class="form-control" name="senha" id="senha" placeholder="Senha" value="<?php echo $resultado1['senha']; ?>" />
                     </div>
-                    <div class="form-group text-left col-md-4">
+                    <div class="form-group text-left col-md-3">
                         <label name="telefone">Telefone</label>
                         <br>
                         <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" value="<?php echo $resultado1['telefone']; ?>" />
@@ -146,12 +146,13 @@ $resultado2 = mysql_fetch_assoc($result2);
                 </div>
                 <div class="row">
                     <div class="homePrincipal col-md-4 text-center ">
-                        <a href="main-dentista.php" class="hvr-grow-shadow"><img src="images/botao-home-render.png" class="home">
+                        <a href="administrativo.php?link=1" class="hvr-grow-shadow"><img src="images/botao-home-render.png" class="home">
                             <br>
                             <label name="home">Home</label>
                         </a>
                     </div>
                     <div class="salvarPrincipal col-md-6 text-center">
+
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
                                 <a href="administrativo.php?link=3" type="submit" class="hvr-float-shadow"><img src="images/botao-salvar-render.png" class="salvar">
@@ -163,40 +164,19 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button class="btn">
-                                <a href="#" type="submit" class="hvr-float-shadow" data-toggle="modal" data-target="#Modal-Usuario"><img src="images/botao-cancelar-render.png" class="cancelar">
+                                <a href="administrativo.php?link=3" type="submit" class="hvr-float-shadow"><img src="images/botao-listar-render.png" class="cancelar">
                                     <br>
-                                    <label name="cancelar">Cancelar</label>
+                                    <label name="cancelar">Listar</label>
                                 </a>
                             </button>
-
-                            <!-- Início Modal Usuário-->
-                            <div class="modal fade" id="Modal-Usuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title alert alert-danger" role="alert" id="myModalLabel"><strong>ATENÇÃO!!!</strong></h4> </div>
-                                        <div class="modal-body">
-                                            <div class="modal-container">
-                                                <div class="row row-centered">
-                                                    <div class="alert alert-info" role="alert"><strong>Deseja mesmo sair desta página?</strong></div>
-                                                    <a href="main-admin.php" class="btn btn-default">Sim</a>
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Fim Modal Usuário-->
 
                         </div>
 
                         <div class="btn col-md-2">
                             <button type="reset" class="btn">
-                                <a class="hvr-float-shadow"><img src="images/botao-limpar-render.png" class="limpar">
+                                <a href="processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow"><img src="images/botao-excluir-render.png" class="limpar">
                                     <br>
-                                    <label name="limpar">Limpar</label>
+                                    <label name="limpar">Excluir</label>
                                 </a>
                             </button>
                         </div>
