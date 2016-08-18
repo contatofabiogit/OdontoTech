@@ -4,12 +4,12 @@
     <head>
 
         <?php
-        include_once './padroes/cabecalho_head.php';
+        include_once '../padroes/cabecalho_head.php';
         ?>
 
         <title>OdontoTech - Buscar Dentista</title>
-        <link rel="stylesheet" href="css/main-hover.css">
-        <link rel="stylesheet" href="css/buscar_dentista.css">
+        <link rel="stylesheet" href="../css/main-hover.css">
+        <link rel="stylesheet" href="../css/buscar_dentista.css">
     </head>
 
     <body>
@@ -23,7 +23,7 @@
             <div class="row cabecalhoP">
                 <header>Sistema Odontológico - Buscar Dentista</header>
                 <?php
-                include_once './padroes/cabecalho_body.php';
+                include_once '../padroes/cabecalho_body.php';
                 ?>
             </div>
             <br>
@@ -45,7 +45,7 @@
                         <td>
                             <a href="administrativo.php?link=5&id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-primary">Visualizar</button></a>
                             <a href="administrativo.php?link=4&id=<?php echo $linhas['id_pessoa']; ?>" ><button type="button" class="btn btn-sm btn-warning">Editar</button></a>
-                            <a href="processamento/apg_dentista.php?id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-danger">Excluir</button></a> 
+                            <a href="../processamento/apg_dentista.php?id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-danger">Excluir</button></a> 
                         </td>
                         <?php
                         echo '</tr>';
@@ -54,8 +54,19 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="row">
+                <div class="homePrincipal col-md-12 text-center ">
+                    <a href="administrativo.php?link=1" class="hvr-grow-shadow">
+                        <img src="../images/botao-home-render.png" class="home">
+                        <br>
+                        <label name="home">Home</label>
+                    </a>
+                </div>
+            </div>
+
             <?php
-            include_once './padroes/rodape_body.php';
+            include_once '../padroes/rodape_body.php';
             ?>
         </div>
     </body>

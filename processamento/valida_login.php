@@ -31,13 +31,13 @@ if(empty($resultado)){
     $_SESSION['pessoaTelResidencial'] = $resultado['tel_residencial'];
     
     if($_SESSION['pessoaNivelAcesso'] == 'Dentista'){
-        header("Location: ../main-dentista.php");
+        header("Location: ../dentista/main-dentista.php");
     }else if($_SESSION['pessoaNivelAcesso'] == 'Assistente'){
-        header("Location: ../main-assistente.php");
+        header("Location: ../assistente/main-assistente.php");
     }else if($_SESSION['pessoaNivelAcesso'] == 'Recepcionista'){
-        header("Location: ../main-recepcionista.php");
+        header("Location: ../recepcionista/main-recepcionista.php");
     }else if($_SESSION['pessoaNivelAcesso'] == 'Paciente'){
-        header("Location: ../main-paciente.php");
+        header("Location: ../paciente/main-paciente.php");
     }
 }
 ?>

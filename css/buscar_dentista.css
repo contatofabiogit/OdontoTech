@@ -8,3 +8,7 @@ and open the template in the editor.
     Author     : CLIENTE
 */
 
+.home{
+    max-width: 50px;
+    padding-top: 10px;
+}

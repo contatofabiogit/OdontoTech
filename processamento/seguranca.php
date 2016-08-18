@@ -13,5 +13,5 @@ if (($_SESSION['pessoaId'] == "") ||
     $_SESSION['loginErro'] = "Área restrita apenas para usuários cadastrados!";
 
     //Manda o usuário para tela de login
-    header("Location: login.php");
+    header("Location: ../login.php");
 }

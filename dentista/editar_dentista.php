@@ -15,14 +15,14 @@ $resultado2 = mysql_fetch_assoc($result2);
     <head>
 
         <?php
-        include_once './padroes/cabecalho_head.php';
+        include_once '../padroes/cabecalho_head.php';
         ?>
 
-        <title>OdontoTech - Cadastrar Dentista</title>
+        <title>OdontoTech - Editar Dentista</title>
         <!-- Location-->
-        <link rel="stylesheet" href="css/main-admin.css">
-        <link rel="stylesheet" href="css/main-hover.css">
-        <link rel="stylesheet" href="css/cadastrar-dentista.css">
+        <link rel="stylesheet" href="../css/main-admin.css">
+        <link rel="stylesheet" href="../css/main-hover.css">
+        <link rel="stylesheet" href="../css/cadastrar-dentista.css">
 
         <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
         <script type="text/javascript">
@@ -34,8 +34,8 @@ $resultado2 = mysql_fetch_assoc($result2);
                         placeholder: "dd/mm/aaaa"
                     });
                     $("#telefone").mask("(99) 9.9999-9999");
-                    $("#cpf").mask("99999999999");
-                    $("#rg").mask("99999999999");
+                    $("#cpf").mask("999.999.999-99");
+                    $("#rg").mask("9999999999-9");
                 });
             });
         </script>
@@ -46,11 +46,11 @@ $resultado2 = mysql_fetch_assoc($result2);
             <br>
             <header>Sistema Odontológico - Editar Dentista</header>
             <?php
-            include_once './padroes/cabecalho_body.php';
+            include_once '../padroes/cabecalho_body.php';
             ?>
 
             <br>
-            <form method="POST" action="processamento/ed_dentista.php">
+            <form method="POST" action="../processamento/ed_dentista.php">
 
                 <div class="row form-group text-left">
                     <div class="form-group text-left col-md-6">
@@ -76,14 +76,19 @@ $resultado2 = mysql_fetch_assoc($result2);
                     <div class="form-group text-left col-md-3">
                         <label name="senha">Senha</label>
                         <br>
-                        <input type="text" class="form-control" name="senha" id="senha" placeholder="Senha" value="<?php echo $resultado1['senha']; ?>" />
+                        <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha" value="<?php echo $resultado1['senha']; ?>" />
+                    </div>
+                    <div class="form-group text-left col-md-3">
+                        <label name="senha">Confirmação de Senha</label>
+                        <br>
+                        <input type="password" class="form-control" name="csenha" id="senha" placeholder="Confirmação de Senha" value="<?php echo $resultado1['senha']; ?>" required/>
                     </div>
                     <div class="form-group text-left col-md-3">
                         <label name="telefone">Telefone</label>
                         <br>
                         <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" value="<?php echo $resultado1['telefone']; ?>" />
                     </div>
-                    <div class="form-group text-left col-md-2">
+                    <div class="form-group text-left col-md-3">
                         <label name="text">Sexo</label>
                         <br>
                         <select class="form-control" id="sexo" name="sexo" value="<?php echo $resultado1['sexo']; ?>">
@@ -146,7 +151,7 @@ $resultado2 = mysql_fetch_assoc($result2);
                 </div>
                 <div class="row">
                     <div class="homePrincipal col-md-4 text-center ">
-                        <a href="administrativo.php?link=1" class="hvr-grow-shadow"><img src="images/botao-home-render.png" class="home">
+                        <a href="./administrativo.php?link=1" class="hvr-grow-shadow"><img src="../images/botao-home-render.png" class="home">
                             <br>
                             <label name="home">Home</label>
                         </a>
@@ -155,7 +160,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="administrativo.php?link=3" type="submit" class="hvr-float-shadow"><img src="images/botao-salvar-render.png" class="salvar">
+                                <a href="./administrativo.php?link=3" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>
@@ -164,7 +169,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button class="btn">
-                                <a href="administrativo.php?link=3" type="submit" class="hvr-float-shadow"><img src="images/botao-listar-render.png" class="cancelar">
+                                <a href="administrativo.php?link=3" type="submit" class="hvr-float-shadow"><img src="../images/botao-listar-render.png" class="cancelar">
                                     <br>
                                     <label name="cancelar">Listar</label>
                                 </a>
@@ -174,7 +179,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button type="reset" class="btn">
-                                <a href="processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow"><img src="images/botao-excluir-render.png" class="limpar">
+                                <a href="../processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow"><img src="../images/botao-excluir-render.png" class="limpar">
                                     <br>
                                     <label name="limpar">Excluir</label>
                                 </a>
@@ -185,7 +190,7 @@ $resultado2 = mysql_fetch_assoc($result2);
             </form>
 
             <?php
-            include_once './padroes/rodape_body.php';
+            include_once '../padroes/rodape_body.php';
             ?>
 
         </div>

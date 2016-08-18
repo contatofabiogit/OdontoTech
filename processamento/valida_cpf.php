@@ -1,6 +1,5 @@
 <?php
 
-
 // Função que valida o CPF
 function validaCPF($cpf) { // Verifiva se o número digitado contém todos os digitos
     $cpf = str_pad(ereg_replace('[^0-9]', '', $cpf), 11, '0', STR_PAD_LEFT);
@@ -25,13 +24,4 @@ function validaCPF($cpf) { // Verifiva se o número digitado contém todos os di
     }
 }
 
-// Verifica se o botão de validação foi acionado
-if (isset($_POST['cpf'])) {// Adiciona o numero enviado na variavel $cpf_enviado, poderia ser outro nome, e executa a função acima
-    $cpf_enviado = validaCPF($_POST['cpf']);
-    // Verifica a resposta da função e exibe na tela
-    if ($cpf_enviado == true)
-        echo "CPF VERDADEIRO";
-    elseif ($cpf_enviado == false)
-        echo "CPF FALSO";
-}
 ?> 

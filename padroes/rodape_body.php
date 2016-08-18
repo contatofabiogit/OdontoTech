@@ -1,5 +1,5 @@
 <br>
-<div class="logoCanto row-centered"> <img src="images/logo-render.png" alt="logo"> </div>
+<div class="logoCanto row-centered"> <img src="../images/logo-render.png" alt="logo"> </div>
 <br>
 <div class="menu"> </div>
 <br>

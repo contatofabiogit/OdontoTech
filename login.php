@@ -29,7 +29,7 @@ session_start();
             <div class="row cabecalho"> <strong>OdontoTech</strong> </div>
             <div class="row logoLogin"> <img src="images/logo-render.png" alt="logomarca"> </div>
             <br>
-            <form role="form-signin" method="POST" action="processamento/valida_login.php">
+            <form role="form-signin" method="POST" action="./processamento/valida_login.php">
                 <div class="row entrada">
                     <div class="iconInput"> <i class="glyphicon glyphicon-user"></i>
                         <input type="text" name="login" class="form-control" placeholder="Login" required autofocus/> </div>

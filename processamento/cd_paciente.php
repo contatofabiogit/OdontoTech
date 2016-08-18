@@ -18,7 +18,9 @@ $dt_nascimeto = $_POST["dt_nascimento"];
 $email = $_POST["email"];
 $nivelacesso = $_POST["nivelacesso"];
 
-if (($nome == "") && ($cro == "") && ($especializacao == "") && ($login == "") && ($senha == "") && ($telefone == "") && ($sexo == "") && ($rg == "") && ($cpf == "") && ($dt_nascimeto == "") && ($email == "")) {
+if (($nome == "") && ($cro == "") && ($especializacao == "") && ($login == "") &&
+        ($senha == "") && ($telefone == "") && ($sexo == "") && ($rg == "") &&
+        ($cpf == "") && ($dt_nascimeto == "") && ($email == "")) {
     echo 'Preencha todos os campos!';
 } else if ($senha != $cSenha) {
     echo 'As senhas não estão iguais!';
