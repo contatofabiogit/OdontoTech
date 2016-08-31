@@ -84,9 +84,9 @@ $resultado2 = mysql_fetch_assoc($result2);
                         <input type="password" class="form-control" name="csenha" id="senha" placeholder="Confirmação de Senha" value="<?php echo $resultado1['senha']; ?>" required/>
                     </div>
                     <div class="form-group text-left col-md-3">
-                        <label name="telefone">Telefone</label>
+                        <label name="celular">Celular</label>
                         <br>
-                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" value="<?php echo $resultado1['telefone']; ?>" />
+                        <input type="text" class="form-control" name="celular" id="celular" placeholder="Celular" value="<?php echo $resultado1['celular']; ?>" />
                     </div>
                     <div class="form-group text-left col-md-3">
                         <label name="text">Sexo</label>

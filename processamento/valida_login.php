@@ -31,7 +31,7 @@ if(empty($resultado)){
     $_SESSION['pessoaTelResidencial'] = $resultado['tel_residencial'];
     
     if($_SESSION['pessoaNivelAcesso'] == 'Dentista'){
-        header("Location: ../dentista/main-dentista.php");
+        header("Location: ../dentista/administrativo.php?link=1");
     }else if($_SESSION['pessoaNivelAcesso'] == 'Assistente'){
         header("Location: ../assistente/main-assistente.php");
     }else if($_SESSION['pessoaNivelAcesso'] == 'Recepcionista'){

@@ -45,7 +45,7 @@
                         <td>
                             <a href="administrativo.php?link=5&id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-primary">Visualizar</button></a>
                             <a href="administrativo.php?link=4&id=<?php echo $linhas['id_pessoa']; ?>" ><button type="button" class="btn btn-sm btn-warning">Editar</button></a>
-                            <a href="../processamento/apg_dentista.php?id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-danger">Excluir</button></a> 
+                            <a href="../processamento/apg_dentista.php?id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-danger">Excluir</button></a>
                         </td>
                         <?php
                         echo '</tr>';

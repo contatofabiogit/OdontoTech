@@ -84,9 +84,9 @@ $resultado2 = mysql_fetch_assoc($result2);
                     <input type="password" class="form-control" name="csenha" id="senha" placeholder="Confirmação de Senha" value="<?php echo $resultado1['senha']; ?>" disabled/>
                 </div>
                 <div class="form-group text-left col-md-3">
-                    <label name="telefone">Telefone</label>
+                    <label name="celular">Celular</label>
                     <br>
-                    <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" value="<?php echo $resultado1['telefone']; ?>" disabled/>
+                    <input type="text" class="form-control" name="celular" id="celular" placeholder="Celular" value="<?php echo $resultado1['celular']; ?>" disabled/>
                 </div>
                 <div class="form-group text-left col-md-3">
                     <label name="text">Sexo</label>
@@ -165,21 +165,20 @@ $resultado2 = mysql_fetch_assoc($result2);
                                 <label name="cancelar">Listar</label>
                             </a>
                         </button>
-
                     </div>
 
                     <div class="btn col-md-2">
                         <a href="administrativo.php?link=4&id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow"><img src="../images/botao-editar-render.png" class="limpar">
                             <br>
-                            <label name="limpar">Editar</label>
+                            <label>Editar</label>
                         </a>
                     </div>
 
                     <div class="btn col-md-2">
-                        <button type="reset" class="btn">
+                        <button class="btn">
                             <a href="../processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow"><img src="../images/botao-excluir-render.png" class="limpar">
                                 <br>
-                                <label name="limpar">Excluir</label>
+                                <label>Excluir</label>
                             </a>
                         </button>
                     </div>
