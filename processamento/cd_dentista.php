@@ -27,7 +27,7 @@ if (($nome == "") && ($cro == "") && ($especializacao == "") && ($login == "") &
     include '../processamento/valida_cpf.php';
 
     if (validaCPF($cpf)) {
-        $query1 = mysql_query("INSERT INTO pessoa VALUES ('', '$nome', '$login', '$senha', '$telefone', '$sexo', '$rg', '$cpf', '$dt_nascimeto', '$email', '$nivelacesso')");
+        $query1 = mysql_query("INSERT INTO pessoa VALUES ('', '$nome', '$login', '$senha', '$email', '$rg', '$cpf', '$sexo', '$dt_nascimeto', '$celular', '$nivelacesso')");
         $query2 = mysql_query("INSERT INTO dentista VALUES ('', '$cro', '$especializacao', LAST_INSERT_ID())");
 
         header("Location: ../dentista/administrativo.php?link=3");

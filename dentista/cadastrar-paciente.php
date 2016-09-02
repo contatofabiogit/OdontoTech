@@ -184,7 +184,7 @@
                         echo "<option value='Selecione'>Selecione</option>";
                         while ($rows = mysql_fetch_array($result)) {
                             echo"<option value='$rows[id_estado]'";
-                            echo ">$rows[id_estado] - $rows[nome]";
+                            echo ">$rows[nome]";
                         }
                         echo "</select>";
                         ?>
@@ -212,7 +212,7 @@
                     <div class="salvarPrincipal col-md-6 text-center">
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="../processamento/cd_dentista.php" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a href="../processamento/cd_paciente.php.php" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>

@@ -19,6 +19,9 @@ $pag[3] = './buscar-dentista.php';
 $pag[4] = './editar_dentista.php';
 $pag[5] = './visualizar_dentista.php';
 $pag[6] = './cadastrar-paciente.php';
+$pag[7] = './visualizar_paciente.php';
+$pag[8] = './buscar-paciente.php';
+
 
 if (!empty($link)) {
     if (file_exists($pag[$link])) {

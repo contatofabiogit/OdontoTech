@@ -78,7 +78,7 @@
                                                 <a href="administrativo.php?link=3" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-dentista-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images//buscar-dentista-render-onmouse.png'" onmouseout="this.src = '../images/buscar-dentista-render.png'"> </a>
                                             </div>
                                             <div class="col-md-4 col-centered text-center paciente">
-                                                <a href="buscar-paciente.php" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-paciente-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images/buscar-paciente-render-onmouse.png'" onmouseout="this.src = '../images/buscar-paciente-render.png'"> </a>
+                                                <a href="administrativo.php?link=8" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-paciente-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images/buscar-paciente-render-onmouse.png'" onmouseout="this.src = '../images/buscar-paciente-render.png'"> </a>
                                             </div>
                                             <div class="col-md-4 col-centered text-center funcionarios">
                                                 <a href="buscar-funcionarios.php" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-funcionarios-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images/buscar-funcionarios-render-onmouse.png'" onmouseout="this.src = '../images/buscar-funcionarios-render.png'"> </a>
