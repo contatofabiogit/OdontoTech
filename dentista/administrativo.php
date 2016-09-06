@@ -5,11 +5,6 @@ include_once("../processamento/seguranca.php");
 include_once("../processamento/conexao.php");
 
 
-header('Content-Type: text/html; charset=utf-8');
-mysql_query("SET NAMES 'utf8'");
-mysql_query('SET character_set_connection=utf8');
-mysql_query('SET character_set_client=utf8');
-mysql_query('SET character_set_results=utf8');
 
 $link = $_GET['link'];
 
@@ -21,6 +16,8 @@ $pag[5] = './visualizar_dentista.php';
 $pag[6] = './cadastrar-paciente.php';
 $pag[7] = './visualizar_paciente.php';
 $pag[8] = './buscar-paciente.php';
+$pag[9] = './editar-paciente.php';
+
 
 
 if (!empty($link)) {

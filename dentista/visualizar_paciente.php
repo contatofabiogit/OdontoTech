@@ -52,32 +52,42 @@ $resultado2 = mysql_fetch_assoc($result2);
             <br>
 
             <div class="row form-group text-left">
+
                 <div class="form-group text-left col-md-6">
                     <label>Nome Completo</label>
                     <br>
-                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" required value="<?php echo $resultado1['nome']; ?>" disabled/>
+                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" value="<?php echo $resultado1['nome']; ?>" disabled/>
+                </div>
+                <div class="form-group text-left col-md-3">
+                    <label name="cro">CRO</label>
+                    <br>
+                    <input type="text" name="cro" class="form-control" id="cro" placeholder="CRO" value="<?php echo $resultado2['cro']; ?>" disabled/>
+                </div>
+                <div class="form-group text-left col-md-3">
+                    <label name="especializacao">Especialização</label>
+                    <br>
+                    <input type="text" class="form-control" name="especializacao" id="especializacao" placeholder="Especialização" value="<?php echo $resultado2['especializacao']; ?>" disabled/>
                 </div>
                 <div class="form-group text-left col-md-3">
                     <label name="login">Login</label>
                     <br>
-                    <input type="text" class="form-control" name="login" id="login" placeholder="Login" required value="<?php echo $resultado1['login']; ?>" disabled/>
+                    <input type="text" class="form-control" name="login" id="login" placeholder="Login" value="<?php echo $resultado1['login']; ?>" disabled/>
                 </div>
                 <div class="form-group text-left col-md-3">
                     <label name="senha">Senha</label>
                     <br>
-                    <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha" required value="<?php echo $resultado1['senha']; ?>" disabled/>
+                    <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha" value="<?php echo $resultado1['senha']; ?>" disabled/>
                 </div>
                 <div class="form-group text-left col-md-3">
                     <label name="senha">Confirmação de Senha</label>
                     <br>
-                    <input type="password" class="form-control" name="csenha" id="senha" placeholder="Senha" required disabled/>
-                </div>                    
-                <div class="form-group text-left col-md-3">
-                    <label name="telefone">Telefone</label>
-                    <br>
-                    <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required onkeypress="mascara(this, '## #####-####')" maxlength="14" value="<?php echo $resultado1['telefone']; ?>" disabled/>
+                    <input type="password" class="form-control" name="csenha" id="senha" placeholder="Confirmação de Senha" value="<?php echo $resultado1['senha']; ?>" disabled/>
                 </div>
-
+                <div class="form-group text-left col-md-3">
+                    <label name="celular">Celular</label>
+                    <br>
+                    <input type="text" class="form-control" name="celular" id="celular" placeholder="Celular" value="<?php echo $resultado1['celular']; ?>" disabled/>
+                </div>
                 <div class="form-group text-left col-md-3">
                     <label name="text">Sexo</label>
                     <br>
@@ -107,34 +117,36 @@ $resultado2 = mysql_fetch_assoc($result2);
                 <div class="form-group text-left col-md-3">
                     <label name="rg">RG</label>
                     <br>
-                    <input type="text" class="form-control" name="rg" id="rg" placeholder="RG" size="20" required onkeypress="mascara(this, '##########-#')" maxlength="12" value="<?php echo $resultado1['rg']; ?>" disabled/>
+                    <input type="text" class="form-control" name="rg" id="rg" placeholder="RG" size="20" value="<?php echo $resultado1['rg']; ?>" disabled/>
                 </div>
 
                 <div class="form-group text-left col-md-3">
                     <label name="cpf">CPF</label>
                     <br>
-                    <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF" size="20" required onkeypress="mascara(this, '###.###.###-##')" maxlength="14" value="<?php echo $resultado1['cpf']; ?>" disabled/>
+                    <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF" size="20" value="<?php echo $resultado1['cpf']; ?>" disabled/>
                 </div>
 
                 <div class="form-group text-left col-md-3">
                     <label name="dt_nascimento">Data de Nascimento</label>
                     <br>
-                    <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" required value="<?php echo $resultado1['dt_nascimento']; ?>" disabled/>
+                    <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" value="<?php echo $resultado1['dt_nascimento']; ?>" disabled/>
                 </div>
-                <div class="form-group text-left col-md-6">
-                    <label name="email">E-mail</label>
-                    <br>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required value="<?php echo $resultado1['email']; ?>" disabled/>
-                </div>
+
                 <div class="form-group text-left col-md-3">
                     <label name="nivelacesso">Nível de Acesso</label>
                     <br>
-                    <select class='form-control' data-size='5' id='nivelacesso' name='nivelacesso' disabled>
+                    <select class='form-control' data-size='5' id='nivelacesso' name='nivelacesso' value="<?php echo $resultado1['nivel_acesso']; ?>" disabled>
                         <option value='Dentista'>Dentista</option>
                     </select>
                 </div>
 
-                <input type="hidden" name="id" value="<?php echo $resultado1['id_pessoa']; ?>" />
+                <div class="form-group text-left col-md-6">
+                    <label name="email">E-mail</label>
+                    <br>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="<?php echo $resultado1['email']; ?>" disabled/>
+                </div>
+
+                <input type="hidden" name="id" value="<?php echo $resultado1['id_pessoa']; ?>" disabled/>
 
             </div>
             <div class="row">

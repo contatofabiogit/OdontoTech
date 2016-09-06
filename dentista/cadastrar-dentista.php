@@ -59,16 +59,6 @@
                         <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" required/>
                     </div>
                     <div class="form-group text-left col-md-3">
-                        <label name="cro">CRO</label>
-                        <br>
-                        <input type="text" name="cro" class="form-control" id="cro" placeholder="CRO" required onkeypress="mascara(this, '#####')" maxlength="5"/>
-                    </div>
-                    <div class="form-group text-left col-md-3">
-                        <label name="especializacao">Especialização</label>
-                        <br>
-                        <input type="text" class="form-control" name="especializacao" id="especializacao" placeholder="Especialização" required/>
-                    </div>
-                    <div class="form-group text-left col-md-3">
                         <label name="login">Login</label>
                         <br>
                         <input type="text" class="form-control" name="login" id="login" placeholder="Login" required/>
@@ -84,17 +74,17 @@
                         <input type="password" class="form-control" name="csenha" id="senha" placeholder="Senha" required/>
                     </div>                    
                     <div class="form-group text-left col-md-3">
-                        <label name="celular">Celular</label>
+                        <label name="telefone">Telefone</label>
                         <br>
-                        <input type="text" class="form-control" name="celular" id="celular" placeholder="Celular" required onkeypress="mascara(this, '## # ####-####')" maxlength="14"/>
+                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required onkeypress="mascara(this, '## #####-####')" maxlength="14"/>
                     </div>
                     <div class="form-group text-left col-md-3">
                         <label name="text">Sexo</label>
                         <br>
                         <select class="form-control" id="sexo" name="sexo" required>
                             <option>Selecione</option>
-                            <option value="M">M</option>
-                            <option value="F">F</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
                         </select>
                     </div>
 
@@ -115,19 +105,17 @@
                         <br>
                         <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" required/>
                     </div>
-
+                    <div class="form-group text-left col-md-6">
+                        <label name="email">E-mail</label>
+                        <br>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required/>
+                    </div>
                     <div class="form-group text-left col-md-3">
                         <label name="nivelacesso">Nível de Acesso</label>
                         <br>
                         <select class='form-control' data-size='5' id='nivelacesso' name='nivelacesso' required>
                             <option value='Dentista'>Dentista</option>
                         </select>
-                    </div>
-
-                    <div class="form-group text-left col-md-6">
-                        <label name="email">E-mail</label>
-                        <br>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required/>
                     </div>
 
                 </div>
