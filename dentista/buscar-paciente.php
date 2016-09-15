@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+<?php
+$getpesquisa = "SELECT* FROM paciente";
+$getsql = mysql_query($getpesquisa);
+?>
+
 <html lang="pt-br">
 
     <head>
@@ -10,6 +16,8 @@
         <title>OdontoTech - Buscar Dentista</title>
         <link rel="stylesheet" href="../css/main-hover.css">
         <link rel="stylesheet" href="../css/buscar_dentista.css">
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js""></script>
     </head>
 
     <body>

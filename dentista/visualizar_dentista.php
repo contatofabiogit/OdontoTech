@@ -57,6 +57,16 @@ $resultado2 = mysql_fetch_assoc($result2);
                     <br>
                     <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" required value="<?php echo $resultado1['nome']; ?>" disabled/>
                 </div>
+                <div class="form-group text-left col-md-2">
+                        <label>CRO</label>
+                        <br>
+                        <input type="text" name="cro" class="form-control" id="cro" placeholder="CRO" required value="<?php echo $resultado2['cro']; ?>" onkeypress="mascara(this, '#####')" maxlength="5" disabled/>
+                    </div>
+                    <div class="form-group text-left col-md-4">
+                        <label>Especialização</label>
+                        <br>
+                        <input type="text" name="especializacao" class="form-control" id="especializacao" placeholder="Especialização" required value="<?php echo $resultado2['especializacao']; ?>" disabled/>
+                    </div>
                 <div class="form-group text-left col-md-3">
                     <label name="login">Login</label>
                     <br>
@@ -75,7 +85,7 @@ $resultado2 = mysql_fetch_assoc($result2);
                 <div class="form-group text-left col-md-3">
                     <label name="telefone">Telefone</label>
                     <br>
-                    <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required onkeypress="mascara(this, '## #####-####')" maxlength="14" value="<?php echo $resultado1['telefone']; ?>" disabled/>
+                    <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required onkeypress="mascara(this, '## #####-####')" maxlength="13" value="<?php echo $resultado1['telefone']; ?>" disabled/>
                 </div>
 
                 <div class="form-group text-left col-md-3">

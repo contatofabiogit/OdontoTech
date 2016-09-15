@@ -58,6 +58,16 @@ $resultado2 = mysql_fetch_assoc($result2);
                         <br>
                         <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" required value="<?php echo $resultado1['nome']; ?>"/>
                     </div>
+                    <div class="form-group text-left col-md-2">
+                        <label>CRO</label>
+                        <br>
+                        <input type="text" name="cro" class="form-control" id="cro" placeholder="CRO" required value="<?php echo $resultado2['cro']; ?>" onkeypress="mascara(this, '#####')" maxlength="5"/>
+                    </div>
+                    <div class="form-group text-left col-md-4">
+                        <label>Especialização</label>
+                        <br>
+                        <input type="text" name="especializacao" class="form-control" id="especializacao" placeholder="Especialização" required value="<?php echo $resultado2['especializacao']; ?>"/>
+                    </div>
                     <div class="form-group text-left col-md-3">
                         <label name="login">Login</label>
                         <br>
@@ -76,34 +86,34 @@ $resultado2 = mysql_fetch_assoc($result2);
                     <div class="form-group text-left col-md-3">
                         <label name="telefone">Telefone</label>
                         <br>
-                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required onkeypress="mascara(this, '## #####-####')" maxlength="14" value="<?php echo $resultado1['telefone']; ?>"/>
+                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required onkeypress="mascara(this, '## #####-####')" maxlength="13" value="<?php echo $resultado1['telefone']; ?>"/>
                     </div>
-                    
+
                     <div class="form-group text-left col-md-3">
-                    <label name="text">Sexo</label>
-                    <br>
-                    <select class="form-control" id="sexo" name="sexo" value="<?php echo $resultado1['sexo']; ?>">
-                        <option>Selecione</option>
-                        <option value="M"
+                        <label name="text">Sexo</label>
+                        <br>
+                        <select class="form-control" id="sexo" name="sexo" value="<?php echo $resultado1['sexo']; ?>">
+                            <option>Selecione</option>
+                            <option value="M"
 
-                                <?php
-                                if ($resultado1['sexo'] == 'M') {
-                                    echo 'Selected';
-                                }
-                                ?>
+                                    <?php
+                                    if ($resultado1['sexo'] == 'M') {
+                                        echo 'Selected';
+                                    }
+                                    ?>
 
-                                >Masculino</option>
-                        <option value="F"
+                                    >Masculino</option>
+                            <option value="F"
 
-                                <?php
-                                if ($resultado1['sexo'] == 'F') {
-                                    echo 'Selected';
-                                }
-                                ?>
+                                    <?php
+                                    if ($resultado1['sexo'] == 'F') {
+                                        echo 'Selected';
+                                    }
+                                    ?>
 
-                                >Feminino</option>
-                    </select>
-                </div>
+                                    >Feminino</option>
+                        </select>
+                    </div>
 
                     <div class="form-group text-left col-md-3">
                         <label name="rg">RG</label>
@@ -170,7 +180,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button class="btn">
-                                <a href="../processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow">
+                                <a href="../processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow" data-toggle="modal" data-target="#Modal-Excluir">
                                     <img src="../images/botao-excluir-render.png" class="limpar">
                                     <br>
                                     <label name="limpar">Excluir</label>

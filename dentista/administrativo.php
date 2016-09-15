@@ -16,7 +16,7 @@ $pag[5] = './visualizar_dentista.php';
 $pag[6] = './cadastrar-paciente.php';
 $pag[7] = './visualizar_paciente.php';
 $pag[8] = './buscar-paciente.php';
-$pag[9] = './editar-paciente.php';
+$pag[9] = './editar_paciente.php';
 
 
 

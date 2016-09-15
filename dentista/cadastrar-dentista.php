@@ -58,6 +58,16 @@
                         <br>
                         <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" required/>
                     </div>
+                    <div class="form-group text-left col-md-2">
+                        <label>CRO</label>
+                        <br>
+                        <input type="text" name="cro" class="form-control" id="cro" placeholder="CRO" required onkeypress="mascara(this, '#####')" maxlength="5"/>
+                    </div>
+                    <div class="form-group text-left col-md-4">
+                        <label>Especialização</label>
+                        <br>
+                        <input type="text" name="especializacao" class="form-control" id="especializacao" placeholder="Especialização" required/>
+                    </div>
                     <div class="form-group text-left col-md-3">
                         <label name="login">Login</label>
                         <br>
@@ -76,7 +86,7 @@
                     <div class="form-group text-left col-md-3">
                         <label name="telefone">Telefone</label>
                         <br>
-                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required onkeypress="mascara(this, '## #####-####')" maxlength="14"/>
+                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required onkeypress="mascara(this, '## #####-####')" maxlength="13"/>
                     </div>
                     <div class="form-group text-left col-md-3">
                         <label name="text">Sexo</label>

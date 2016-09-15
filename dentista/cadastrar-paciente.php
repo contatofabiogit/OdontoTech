@@ -155,17 +155,17 @@
                         <br>
                         <input type="text" class="form-control" id="tel_responsavel" name="tel_responsavel" placeholder="Telefone do Responsável" required onkeypress="mascara(this, '## #####-####')" maxlength="13"/>
                     </div>
-                    <div class="form-group text-left col-md-4">
+                    <div class="form-group text-left col-md-3">
                         <label name="profissao">Profissão</label>
                         <br>
                         <input type="text" class="form-control" id="profissao" name="profissao" placeholder="Profissão" required/>
                     </div>
-                    <div class="form-group text-left col-md-5">
+                    <div class="form-group text-left col-md-6">
                         <label name="endereco">Endereço</label>
                         <br>
                         <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" required/>
                     </div>
-                    <div class="form-group text-left col-md-2">
+                    <div class="form-group text-left col-md-3">
                         <label name="bairro">Bairro</label>
                         <br>
                         <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required />
@@ -208,12 +208,12 @@
                             <option value="to">Tocantins</option> 
                         </select>
                     </div>
-                    <div class="form-group text-left col-md-2">
+                    <div class="form-group text-left col-md-3">
                         <label name="cidade">Cidade</label>
                         <br>
                         <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required />
                     </div>
-                    <div class="form-group text-left col-md-2">
+                    <div class="form-group text-left col-md-3">
                         <label name="numero">Número</label>
                         <br>
                         <input type="text" class="form-control" id="numero" name="numero" placeholder="Número" required />
