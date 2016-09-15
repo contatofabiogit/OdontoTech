@@ -12,3 +12,11 @@ and open the template in the editor.
     max-width: 50px;
     padding-top: 10px;
 }
+
+.material-icons{
+    color:#5D93CD;
+}
+
+.mdl-textfield__input{
+    color:#5D93CD;
+}

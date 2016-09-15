@@ -16,8 +16,9 @@ $getsql = mysql_query($getpesquisa);
         <title>OdontoTech - Buscar Dentista</title>
         <link rel="stylesheet" href="../css/main-hover.css">
         <link rel="stylesheet" href="../css/buscar_dentista.css">
-        
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js""></script>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/carrega-pesquisa.js"></script>
     </head>
 
     <body>
@@ -34,6 +35,24 @@ $getsql = mysql_query($getpesquisa);
                 include_once '../padroes/cabecalho_body.php';
                 ?>
             </div>
+
+            <div class="row">
+                <div class="mdl-layout__header-row">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                         mdl-textfield--floating-label mdl-textfield--align-right">
+                        <label class="mdl-button mdl-js-button mdl-button--icon "
+                               for="fixed-header-drawer-exp">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" name="sample"
+                                   id="fixed-header-drawer-exp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <br>
             <div class="table-responsive">
                 <table class="table table-striped table-hover">
