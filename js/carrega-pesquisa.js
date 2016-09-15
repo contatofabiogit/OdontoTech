@@ -5,3 +5,22 @@
  */
 
 
+$(function (){
+    //pesquisar sem refresh
+    $("#fixed-header-drawer-exp").keyup(function (){
+        var pesquisa = $(this).val();
+        
+        //verificar se a variavel possui algo digitado
+        if(pesquisa != ''){ 
+            var dados = {
+                palavra : pesquisa
+            }
+            $.post('../processamento/busca-sem-refresh-paciente.php', dados, function (retorna){
+            $(".resultado").html(retorna)
+        });
+        }else{
+            $(".resultado");
+        }
+        
+    });
+});

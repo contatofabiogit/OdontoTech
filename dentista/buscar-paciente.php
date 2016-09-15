@@ -36,25 +36,28 @@ $getsql = mysql_query($getpesquisa);
                 ?>
             </div>
 
-            <div class="row">
-                <div class="mdl-layout__header-row">
-                    <div class="mdl-layout-spacer"></div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                         mdl-textfield--floating-label mdl-textfield--align-right">
-                        <label class="mdl-button mdl-js-button mdl-button--icon "
-                               for="fixed-header-drawer-exp">
-                            <i class="material-icons">search</i>
-                        </label>
-                        <div class="mdl-textfield__expandable-holder">
-                            <input class="mdl-textfield__input" type="text" name="sample"
-                                   id="fixed-header-drawer-exp">
+            <form method="post" action="">
+                <div class="row">
+                    <div class="mdl-layout__header-row">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                             mdl-textfield--floating-label mdl-textfield--align-right">
+                            <label class="mdl-button mdl-js-button mdl-button--icon "
+                                   for="fixed-header-drawer-exp">
+                                <i class="material-icons">search</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="text" name="pesquisar"
+                                       id="fixed-header-drawer-exp" placeholder="Digite sua pesquisa..." size="25">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </form>
+            
             <br>
-            <div class="table-responsive">
+            
+            <div class="table-responsive resultado">
                 <table class="table table-striped table-hover">
                     <td>Id</td>
                     <td>Nome</td>
