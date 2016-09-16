@@ -509,7 +509,9 @@ $resultado2 = mysql_fetch_assoc($result2);
                             <button class="btn">
                                 <a href="../processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow"><img src="../images/botao-excluir-render.png" class="limpar">
                                     <br>
+
                                     <label name="limpar">Excluir</label>
+                                    
                                 </a>
                             </button>
                         </div>
