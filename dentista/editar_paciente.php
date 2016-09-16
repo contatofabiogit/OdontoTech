@@ -488,7 +488,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a href="../processamento/ed_paciente.php" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>
