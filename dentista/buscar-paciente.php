@@ -48,7 +48,7 @@ $getsql = mysql_query($getpesquisa);
                             </label>
                             <div class="mdl-textfield__expandable-holder">
                                 <input class="mdl-textfield__input" type="text" name="pesquisar"
-                                       id="fixed-header-drawer-exp" placeholder="Digite sua pesquisa..." size="25">
+                                       id="fixed-header-drawer-exp" placeholder="Pesquisar..." size="25">
                             </div>
                         </div>
                     </div>

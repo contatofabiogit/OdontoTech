@@ -29,11 +29,28 @@ $estado = $_POST["estado"];
 $cidade = $_POST["cidade"];
 $numero = $_POST["numero"];
 
-$query1 = mysql_query("UPDATE pessoa SET nome = '$nome', login = '$login', senha = '$senha', telefone = '$telefone', sexo = '$sexo', rg = '$rg',"
-        . "cpf = '$cpf', dt_nascimento = '$dt_nascimeto', email = '$email', nivel_acesso = '$nivelacesso' WHERE id_pessoa = '$id'");
+if (($nome == "") && ($cro == "") && ($especializacao == "") && ($login == "") &&
+        ($senha == "") && ($telefone == "") && ($sexo == "") && ($rg == "") &&
+        ($cpf == "") && ($dt_nascimeto == "") && ($email == "") && ($nivelacesso == "") && ($nacionalidade == "") && ($est_civil == "") && ($celular == "") && ($local_nascimento == "") && ($nome_responsavel == "") && ($tel_responsavel == "") && ($profissao == "") && ($endereco == "") && ($bairro == "") && ($complemento == "") && ($estado == "") && ($cidade == "") && ($numero == "")) {
+    echo 'Preencha todos os campos!';
+} else if ($senha != $cSenha) {
+    echo 'As senhas não estão iguais!';
+} else {
 
-$query2 = mysql_query("UPDATE paciente SET nacionalidade = '$nacionalidade', est_civil = '$est_civil', dt_nascimento = '$dt_nascimeto', local_nascimento = '$local_nascimento', celular = '$celular', profissao = '$profissao', nome_responsavel = '$nome_responsavel',
+    include '../processamento/valida_cpf.php';
+
+    if (validaCPF($cpf)) {
+        
+        $query1 = mysql_query("UPDATE pessoa SET nome = '$nome', login = '$login', senha = '$senha', email = '$email', rg = '$rg', cpf = '$cpf',
+        sexo = '$sexo', dt_nascimento = '$dt_nascimeto', telefone = '$telefone', nivel_acesso = '$nivelacesso' WHERE id_pessoa = '$id'");
+
+        $query2 = mysql_query("UPDATE paciente SET nacionalidade = '$nacionalidade', est_civil = '$est_civil', dt_nascimento = '$dt_nascimeto', local_nascimento = '$local_nascimento', celular = '$celular', profissao = '$profissao', nome_responsavel = '$nome_responsavel',
                 tel_responsavel = '$tel_responsavel', endereco = '$endereco', bairro = '$bairro', complemento = '$complemento', cidade = '$cidade', estado = '$estado', telefone = '$telefone', numero = '$numero' WHERE pessoa_id_pessoa = '$id' ");
 
-header("Location: ../dentista/administrativo.php?link=8");
+        header("Location: ../dentista/administrativo.php?link=8");
+    } else {
+        header("Location: ../dentista/administrativo.php?link=9");
+    }
+}
+
 ?>
