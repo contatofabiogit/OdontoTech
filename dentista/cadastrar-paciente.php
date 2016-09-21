@@ -231,7 +231,7 @@
                     <div class="salvarPrincipal col-md-6 text-center">
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a href="../processamento/cd_paciente.php.php" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>
@@ -240,7 +240,7 @@
 
                         <div class="btn col-md-2">
                             <button class="btn">
-                                <a href="" type="submit" class="hvr-float-shadow" data-toggle="modal" data-target="#Modal-Usuario"><img src="../images/botao-cancelar-render.png" class="cancelar">
+                                <a href="#" type="submit" class="hvr-float-shadow" data-toggle="modal" data-target="#Modal-Usuario"><img src="../images/botao-cancelar-render.png" class="cancelar">
                                     <br>
                                     <label name="cancelar">Cancelar</label>
                                 </a>

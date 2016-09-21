@@ -50,7 +50,7 @@ $resultado2 = mysql_fetch_assoc($result2);
             ?>
 
             <br>
-            <form method="POST" action="../processamento/ed_paciente.php.php">
+            <form method="POST" action="../processamento/ed_paciente.php">
 
                 <div class="row form-group text-left">
                     <div class="form-group text-left col-md-6">
@@ -488,7 +488,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="./administrativo.php?link=8" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a href="../processamento/ed_paciente.php" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>
@@ -497,7 +497,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button class="btn">
-                                <a href="administrativo.php?link=3" type="submit" class="hvr-float-shadow"><img src="../images/botao-listar-render.png" class="cancelar">
+                                <a href="administrativo.php?link=3" class="hvr-float-shadow"><img src="../images/botao-listar-render.png" class="cancelar">
                                     <br>
                                     <label name="cancelar">Listar</label>
                                 </a>
@@ -509,7 +509,9 @@ $resultado2 = mysql_fetch_assoc($result2);
                             <button class="btn">
                                 <a href="../processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow"><img src="../images/botao-excluir-render.png" class="limpar">
                                     <br>
+
                                     <label name="limpar">Excluir</label>
+                                    
                                 </a>
                             </button>
                         </div>
