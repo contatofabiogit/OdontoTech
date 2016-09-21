@@ -5,19 +5,18 @@
  * and open the template in the editor.
  */
 
-include_once './conexao.php';
+include_once ('./conexao.php');
 
 //recuperando os dados
 $cursos = $_POST['palavra'];
 
-$cursos = "SELECT * FROM pessoa WHERE nome LIKE '%$cursos%' AND nivel_acesso = 'Paciente'";
+$cursos = "SELECT * FROM pessoa WHERE nivel_acesso = 'Paciente' AND nome LIKE '%$cursos%'";
 
 $resultado_paciente = mysql_query($cursos);
 
 if (mysql_num_rows($resultado_paciente) <= 0) {
     echo 'Nenhum paciente encontrado...';
 } else {
-       
     $resultado = mysql_query("SELECT * FROM pessoa WHERE nivel_acesso = 'Paciente'");
     $linhas = mysql_num_rows($resultado);
     ?>
@@ -28,7 +27,7 @@ if (mysql_num_rows($resultado_paciente) <= 0) {
         <td>Opções</td>
         <tbody>
             <?php
-            while ($linhas = mysql_fetch_array($resultado)) {
+            while ($linhas = mysql_fetch_array($resultado_paciente)) {
 
                 echo '<tr>';
                 echo '<td>' . $linhas['id_pessoa'] . '</td>';

@@ -36,7 +36,7 @@ $getsql = mysql_query($getpesquisa);
                 ?>
             </div>
 
-            <form method="post" action="">
+            <form method="POST" action="">
                 <div class="row">
                     <div class="mdl-layout__header-row">
                         <div class="mdl-layout-spacer"></div>
@@ -57,8 +57,8 @@ $getsql = mysql_query($getpesquisa);
             
             <br>
             
-            <div class="table-responsive resultado">
-                <table class="table table-striped table-hover">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover resultado">
                     <td>Id</td>
                     <td>Nome</td>
                     <td>E-mail</td>
@@ -72,7 +72,7 @@ $getsql = mysql_query($getpesquisa);
                             echo '<td>' . $linhas['nome'] . '</td>';
                             echo '<td>' . $linhas['email'] . '</td>';
                             ?>
-                        <td>
+                    <td>
                             <a href="administrativo.php?link=7&id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-primary">Visualizar</button></a>
                             <a href="administrativo.php?link=9&id=<?php echo $linhas['id_pessoa']; ?>" ><button type="button" class="btn btn-sm btn-warning">Editar</button></a>
                             <a href="../processamento/apg_paciente.php?id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-danger">Excluir</button></a>

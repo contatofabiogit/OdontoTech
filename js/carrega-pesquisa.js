@@ -5,22 +5,28 @@
  */
 
 
-$(function (){
+$(function () {
     //pesquisar sem refresh
-    $("#fixed-header-drawer-exp").keyup(function (){
+    $("#fixed-header-drawer-exp").keyup(function () {
         var pesquisa = $(this).val();
-        
+
         //verificar se a variavel possui algo digitado
-        if(pesquisa != ''){ 
+        if (pesquisa != '') {
             var dados = {
-                palavra : pesquisa
+                palavra: pesquisa
             }
-            $.post('../processamento/busca-sem-refresh-paciente.php', dados, function (retorna){
-            $(".resultado").html(retorna)
-        });
-        }else{
-            $(".resultado");
+            $.post('../processamento/busca-sem-refresh-paciente.php', dados, function (retorna) {
+                $(".resultado").html(retorna)
+            });
+        } else {
+            $.ajax({
+                url: '../js/busca-sem-refresh-paciente.php',
+                type: 'POST',
+                dataType: 'html',
+                success: function (data) {
+                    $(".resultado").empty().html(dados);
+                }
+            });
         }
-        
     });
 });
