@@ -37,7 +37,7 @@ if (($nome == "") && ($cro == "") && ($especializacao == "") && ($login == "") &
     echo 'As senhas não estão iguais!';
 } else {
 
-    include '../processamento/valida_cpf.php';
+    require '../processamento/valida_cpf.php';
 
     if (validaCPF($cpf)) {
         

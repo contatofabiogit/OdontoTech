@@ -81,7 +81,7 @@ $resultado2 = mysql_fetch_assoc($result2);
                     <div class="form-group text-left col-md-3">
                         <label name="senha">Confirmação de Senha</label>
                         <br>
-                        <input type="password" class="form-control" name="csenha" id="senha" placeholder="Senha" required/>
+                        <input type="password" class="form-control" name="csenha" id="senha" placeholder="Senha" value="<?php echo $resultado1['senha'];?>" required/>
                     </div>                    
                     <div class="form-group text-left col-md-3">
                         <label name="telefone">Telefone</label>

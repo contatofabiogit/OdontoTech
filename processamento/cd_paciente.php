@@ -40,7 +40,7 @@ if (($nome == "") && ($cro == "") && ($especializacao == "") && ($login == "") &
     include '../processamento/valida_cpf.php';
 
     if (validaCPF($cpf)) {
-        $query1 = mysql_query("INSERT INTO pessoa VALUES ('', '$nome', '$login', '$senha', '$email', '$rg', '$cpf', '$sexo', '$dt_nascimeto', '$celular', '$nivelacesso')");
+        $query1 = mysql_query("INSERT INTO pessoa VALUES ('', '$nome', '$login', '$senha', '$email', '$rg', '$cpf', '$sexo', '$dt_nascimeto', '$telefone', '$nivelacesso')");
         $query2 = mysql_query("INSERT INTO paciente VALUES ('', '$nacionalidade', '$est_civil', '$dt_nascimeto', '$local_nascimento', '$celular', '$profissao', '$nome_responsavel',
                 '$tel_responsavel', '$endereco', '$bairro', '$complemento', '$cidade', '$estado', '$telefone', '$numero', LAST_INSERT_ID())");
 

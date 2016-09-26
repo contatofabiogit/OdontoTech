@@ -71,7 +71,7 @@ $resultado2 = mysql_fetch_assoc($result2);
                     <div class="form-group text-left col-md-3">
                         <label name="senha">Confirmação de Senha</label>
                         <br>
-                        <input type="password" class="form-control" name="csenha" id="senha" placeholder="Senha"/>
+                        <input type="password" class="form-control" name="csenha" id="senha" placeholder="Senha" value="<?php echo $resultado1['senha'];?>"/>
                     </div>                    
                     <div class="form-group text-left col-md-3">
                         <label name="telefone">Telefone</label>
@@ -488,7 +488,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="../processamento/ed_paciente.php" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>
@@ -497,7 +497,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button class="btn">
-                                <a href="administrativo.php?link=3" class="hvr-float-shadow"><img src="../images/botao-listar-render.png" class="cancelar">
+                                <a href="administrativo.php?link=8" class="hvr-float-shadow"><img src="../images/botao-listar-render.png" class="cancelar">
                                     <br>
                                     <label name="cancelar">Listar</label>
                                 </a>
