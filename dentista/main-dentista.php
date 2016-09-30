@@ -44,7 +44,7 @@
                                                 <a href="administrativo.php?link=6" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/cadastrar-paciente-render.png" class="cadastrar" alt="cadastrar" onmouseover="this.src = '../images/cadastrar-paciente-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-paciente-render.png'"> </a>
                                             </div>
                                             <div class="col-md-4 col-centered text-center funcionarios">
-                                                <a href="#m" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/cadastrar-funcionarios-render.png" class="cadastrar" alt="cadastrar" onmouseover="this.src = '../images/cadastrar-funcionarios-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-funcionarios-render.png'"> </a>
+                                                <a href="administrativo.php?link=10" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/cadastrar-funcionarios-render.png" class="cadastrar" alt="cadastrar" onmouseover="this.src = '../images/cadastrar-funcionarios-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-funcionarios-render.png'"> </a>
                                             </div>
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@
                                                 <a href="administrativo.php?link=8" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-paciente-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images/buscar-paciente-render-onmouse.png'" onmouseout="this.src = '../images/buscar-paciente-render.png'"> </a>
                                             </div>
                                             <div class="col-md-4 col-centered text-center funcionarios">
-                                                <a href="buscar-funcionarios.php" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-funcionarios-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images/buscar-funcionarios-render-onmouse.png'" onmouseout="this.src = '../images/buscar-funcionarios-render.png'"> </a>
+                                                <a href="administrativo.php?link=11" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-funcionarios-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images/buscar-funcionarios-render-onmouse.png'" onmouseout="this.src = '../images/buscar-funcionarios-render.png'"> </a>
                                             </div>
                                         </div>
                                     </div>
