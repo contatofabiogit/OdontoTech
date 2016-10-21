@@ -99,13 +99,17 @@
 
                 <!-- Início div receita -->
                 <div class="col-md-3 text-center col-centered">
-                    <a href="#" class="hvr-shutter-out-horizontal"><img src="../images/receita-render.png" class="receita" alt="receita financeira" onmouseover="this.src = '../images/receita-render-onmouse.png'" onmouseout="this.src = '../images/receita-render.png'"></a>
+                    <a href="administrativo.php?link=14" class="hvr-shutter-out-horizontal">
+                        <img src="../images/receita-render.png" class="receita" alt="receita financeira" onmouseover="this.src = '../images/receita-render-onmouse.png'" onmouseout="this.src = '../images/receita-render.png'">
+                    </a>
                 </div>
                 <!-- Fim div receita -->
 
                 <!-- Início div agendar -->
                 <div class="col-md-3 text-center col-centered">
-                    <a href="#" class="hvr-shutter-out-horizontal"><img src="../images/agendar-render.png" class="agendar" alt="relatorio" onmouseover="this.src = '../images/agendar-render-onmouse.png'" onmouseout="this.src = '../images/agendar-render.png'"></a>
+                    <a href="administrativo.php?link=15" class="hvr-shutter-out-horizontal">
+                        <img src="../images/agendar-render.png" class="agendar" alt="relatorio" onmouseover="this.src = '../images/agendar-render-onmouse.png'" onmouseout="this.src = '../images/agendar-render.png'">
+                    </a>
                 </div>
                 <!-- Fim div agendar -->
 
@@ -119,18 +123,24 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">Buscar</h4> </div>
+                                    <h4 class="modal-title" id="myModalLabel">Relatorio</h4> </div>
                                 <div class="modal-body">
                                     <div class="modal-container">
                                         <div class="row row-centered">
                                             <div class="col-md-4 col-centered text-center dentista">
-                                                <a href="#" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/relatorio-paciente-render.png" class="relatorio" alt="relatorio" onmouseover="this.src = '../images//relatorio-paciente-render-onmouse.png'" onmouseout="this.src = '../images/relatorio-paciente-render.png'"> </a>
+                                                <a href="administrativo.php?link=16" class="hvr-shutter-out-horizontal cadastrar">
+                                                    <img src="../images/relatorio-paciente-render.png" class="relatorio" alt="relatorio" onmouseover="this.src = '../images//relatorio-paciente-render-onmouse.png'" onmouseout="this.src = '../images/relatorio-paciente-render.png'">
+                                                </a>
                                             </div>
                                             <div class="col-md-4 col-centered text-center paciente">
-                                                <a href="#" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/relatorio-procedimento-render.png" class="relatorio" alt="relatorio" onmouseover="this.src = '../images/relatorio-procedimento-render-onmouse.png'" onmouseout="this.src = '../images/relatorio-procedimento-render.png'"> </a>
+                                                <a href="administrativo.php?link=17" class="hvr-shutter-out-horizontal cadastrar">
+                                                    <img src="../images/relatorio-procedimento-render.png" class="relatorio" alt="relatorio" onmouseover="this.src = '../images/relatorio-procedimento-render-onmouse.png'" onmouseout="this.src = '../images/relatorio-procedimento-render.png'">
+                                                </a>
                                             </div>
                                             <div class="col-md-4 col-centered text-center funcionarios">
-                                                <a href="#" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/relatorio-receita-render.png" class="relatorio" alt="relatorio" onmouseover="this.src = '../images/relatorio-receita-render-onmouse.png'" onmouseout="this.src = '../images/relatorio-receita-render.png'"> </a>
+                                                <a href="administrativo.php?link=18" class="hvr-shutter-out-horizontal cadastrar">
+                                                    <img src="../images/relatorio-receita-render.png" class="relatorio" alt="relatorio" onmouseover="this.src = '../images/relatorio-receita-render-onmouse.png'" onmouseout="this.src = '../images/relatorio-receita-render.png'">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -148,7 +158,9 @@
 
                 <!-- Início div procedimento -->
                 <div class="col-md-3 text-center col-centered">
-                    <a href="#" class="hvr-shutter-out-horizontal"><img src="../images/procedimento-render.png" class="procedimento" alt="procedimento" onmouseover="this.src = '../images/procedimento-render-onmouse.png'" onmouseout="this.src = '../images/procedimento-render.png'"></a>
+                    <a href="administrativo.php?link=19" class="hvr-shutter-out-horizontal">
+                        <img src="../images/procedimento-render.png" class="procedimento" alt="procedimento" onmouseover="this.src = '../images/procedimento-render-onmouse.png'" onmouseout="this.src = '../images/procedimento-render.png'">
+                    </a>
                 </div>
                 <!-- Fim div procedimento -->
 

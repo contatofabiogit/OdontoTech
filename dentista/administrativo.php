@@ -25,6 +25,15 @@ $pag[11] = './buscar-funcionario.php';
 $pag[12] = './visualizar_funcionario.php';
 $pag[13] = './editar_funcionario.php';
 
+$pag[14] = './cadastrar-receita.php';
+
+$pag[15] = './novo-agendamento.php';
+
+$pag[16] = './relatorio-paciente.php';
+$pag[17] = './relatorio-procedimento.php';
+$pag[18] = './relatorio-receita.php';
+
+$pag[19] = './cadastrar-procedimento.php';
 
 
 if (!empty($link)) {

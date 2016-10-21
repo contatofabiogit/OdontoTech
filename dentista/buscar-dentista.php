@@ -11,6 +11,7 @@
         <title>OdontoTech - Buscar Dentista</title>
         <link rel="stylesheet" href="../css/main-hover.css">
         <link rel="stylesheet" href="../css/buscar_dentista.css">
+        <link rel="stylesheet" href="../css/.css">
     </head>
 
     <body>
@@ -44,30 +45,14 @@
                             echo '<td>' . $linhas['email'] . '</td>';
                             ?>
                         <td>
-                            <a href="administrativo.php?link=5&id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-primary">Visualizar</button></a>
-                            <a href="administrativo.php?link=4&id=<?php echo $linhas['id_pessoa']; ?>" ><button type="button" class="btn btn-sm btn-warning">Editar</button></a>
-                            <a data-toggle="modal" data-target="#Modal-Excluir">
+                            <a href="administrativo.php?link=5&id=<?php echo $linhas['id_pessoa']; ?>">
+                                <button type="button" class="btn btn-sm btn-primary">Visualizar</button>
+                            </a>
+                            <a href="administrativo.php?link=4&id=<?php echo $linhas['id_pessoa']; ?>" >
+                                <button type="button" class="btn btn-sm btn-warning">Editar</button>
+                            </a>
+                            <a href="../processamento/apg_dentista.php?id=<?php echo $linhas['id_pessoa']; ?>" >
                                 <button type="button" class="btn btn-sm btn-danger">Excluir</button>
-                                <!-- Início Modal Usuário-->
-                                <div class="modal fade" id="Modal-Excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h4 class="modal-title" id="myModalLabel">Deseja mesmo excluir o dentista?</h4> </div>
-                                            <div class="modal-body">
-                                                <div class="row text-center">
-                                                    <a href="../processamento/apg_dentista.php?id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-success">Sim</button></a>
-                                                <a href="administrativo.php?link=5"><button type="button" class="btn btn-sm btn-danger">Não</button></a>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Fim Modal Usuário-->
                             </a>
                         </td>
                         <?php

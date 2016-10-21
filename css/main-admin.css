@@ -4,6 +4,10 @@
     box-shadow: -10px 10px 20px #A7A5A0;
 }
 
+i{
+    color: #fff;
+}
+
 header {
     font-size: 27px;
     color: #FFFFFF;

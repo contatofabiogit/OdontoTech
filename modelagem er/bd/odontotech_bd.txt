@@ -1,0 +1,126 @@
+===Base de Dados odontotech_bd
+
+== Estrutura da tabela agenda
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id_agenda**//|int(11)|Não|
+|data|date|Não|
+|hora|time|Não|
+|//**procedimento_id**//|int(11)|Não|
+|//**dentista_id_dentista**//|int(11)|Não|
+|//**pessoa_id_pessoa**//|int(11)|Não|
+== Extraindo dados da tabela agenda
+
+== Estrutura da tabela anamnese
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id_anamnese**//|int(11)|Não|
+|questao_1|varchar(250)|Não|
+|questao_2|varchar(250)|Não|
+|questao_3|varchar(250)|Não|
+|questao_4|varchar(250)|Não|
+|questao_5|varchar(250)|Não|
+|questao_6|varchar(250)|Não|
+|questao_7|varchar(250)|Não|
+|info_add|varchar(250)|Não|
+|//**paciente_id_paciente**//|int(11)|Não|
+== Extraindo dados da tabela anamnese
+
+== Estrutura da tabela dentista
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id_dentista**//|int(11)|Não|
+|cro|varchar(45)|Não|
+|especializacao|varchar(250)|Não|
+|//**pessoa_id_pessoa**//|int(11)|Não|
+== Extraindo dados da tabela dentista
+
+|16|12345|CirurgiÃ£o Dentista|36
+|17|12345|CirurgiÃ£o Dentista|37
+== Estrutura da tabela paciente
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id_paciente**//|int(11)|Não|
+|nacionalidade|varchar(150)|Não|
+|est_civil|varchar(45)|Não|
+|local_nascimento|varchar(250)|Não|
+|celular|varchar(45)|Não|
+|profissao|varchar(250)|Não|
+|nome_responsavel|varchar(250)|Não|
+|tel_responsavel|varchar(100)|Não|
+|endereco|varchar(250)|Sim|NULL
+|bairro|varchar(250)|Sim|NULL
+|complemento|varchar(200)|Sim|NULL
+|cidade|varchar(100)|Sim|NULL
+|estado|varchar(15)|Não|
+|numero|varchar(11)|Não|
+|//**pessoa_id_pessoa**//|int(11)|Não|
+== Extraindo dados da tabela paciente
+
+|7|Brasileira|Solteiro(a)|Cedro|99 99999-9999|Estudante|Maria Luzanira Santos Lima|99 99999-9999|Rosita Afonso AraÃºjo|Jardim|Casa|Cedro|ce|90|38
+|8|Brasileiro|Casado(a)|Iguatu|99 99999-9999|AutÃ´nomo|Francisca Ribeiro de Souza|99 99999-9999|Rua 7 de Setembro|MorenÃ£o|Casa|Iguatu|ce|326|39
+== Estrutura da tabela pessoa
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id_pessoa**//|int(11)|Não|
+|nome|varchar(250)|Não|
+|login|varchar(45)|Não|
+|senha|varchar(45)|Não|
+|email|varchar(250)|Sim|NULL
+|rg|varchar(45)|Não|
+|cpf|varchar(45)|Não|
+|sexo|varchar(1)|Sim|NULL
+|dt_nascimento|date|Não|
+|telefone|varchar(150)|Sim|NULL
+|nivel_acesso|varchar(45)|Não|
+== Extraindo dados da tabela pessoa
+
+|36|FÃ¡bio Alves Ribeiro|fabio|123|fabio@fabio.com|9999999999-9|061.241.133-84|M|2016-12-30|99 99999-9999|Dentista
+|37|Dr. Yule GalvÃ£o|yule|123|yule@teste.com|9999999999-9|508.210.266-40|M|1989-09-09|99 99999-9999|Dentista
+|38|Maria Eliza Santos Lima|eliza|123|eliza.santos@teste.com|9999999999-9|508.210.266-40|F|0000-00-00|99 99999-9999|Paciente
+|39|Francisco Ribeiro de Souza|ribeiro|123|ribeiro@teste.com|9999999999-9|508.210.266-40|M|1954-12-31|99 99999-9999|Paciente
+|40|Hiarly Ferreira de Souza|hiarly|123|hiarly@teste.com|9999999999-9|508.210.266-40|M|1995-12-31|99 99999-9999|Assistente
+== Estrutura da tabela procedimento
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id_procedimento**//|int(11)|Não|
+|tipo|varchar(150)|Não|
+|valor|varchar(45)|Não|
+|descricao|varchar(250)|Não|
+|//**protuario_id_prontuario**//|int(11)|Não|
+== Extraindo dados da tabela procedimento
+
+== Estrutura da tabela prontuario
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id_prontuario**//|int(11)|Não|
+|dt_cadastro|date|Não|
+|//**paciente_id_paciente**//|int(11)|Não|
+== Extraindo dados da tabela prontuario
+
+== Estrutura da tabela receita
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id_receita**//|int(11)|Não|
+|desconto|double|Não|
+|dt_pagamento|date|Não|
+|//**procedimento_id_procedimento**//|int(11)|Não|
+|//**pessoa_id_pessoa**//|int(11)|Não|
+== Extraindo dados da tabela receita
+

@@ -44,7 +44,7 @@ $getsql = mysql_query($getpesquisa);
                              mdl-textfield--floating-label mdl-textfield--align-right">
                             <label class="mdl-button mdl-js-button mdl-button--icon "
                                    for="fixed-header-drawer-exp">
-                                <i class="material-icons">search</i>
+                                <i class="material-icons filho">search</i>
                             </label>
                             <div class="mdl-textfield__expandable-holder">
                                 <input class="mdl-textfield__input" type="text" name="pesquisar"
@@ -54,11 +54,12 @@ $getsql = mysql_query($getpesquisa);
                     </div>
                 </div>
             </form>
-            
+
             <br>
-            
+
             <div class="table-responsive">
                 <table class="table table-striped table-hover resultado">
+                    <td>PDF</td>
                     <td>Id</td>
                     <td>Nome</td>
                     <td>E-mail</td>
@@ -68,14 +69,24 @@ $getsql = mysql_query($getpesquisa);
                         while ($linhas = mysql_fetch_array($resultado)) {
 
                             echo '<tr>';
-                            echo '<td>' . $linhas['id_pessoa'] . '</td>';
-                            echo '<td>' . $linhas['nome'] . '</td>';
-                            echo '<td>' . $linhas['email'] . '</td>';
                             ?>
-                    <td>
-                            <a href="administrativo.php?link=7&id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-primary">Visualizar</button></a>
-                            <a href="administrativo.php?link=9&id=<?php echo $linhas['id_pessoa']; ?>" ><button type="button" class="btn btn-sm btn-warning">Editar</button></a>
-                            <a href="../processamento/apg_paciente.php?id=<?php echo $linhas['id_pessoa']; ?>"><button type="button" class="btn btn-sm btn-danger">Excluir</button></a>
+                        <td><input type="radio" value="<?php $linhas['id_pessoa'] ?>"></td>
+
+                        <?php
+                        echo '<td>' . $linhas['id_pessoa'] . '</td>';
+                        echo '<td>' . $linhas['nome'] . '</td>';
+                        echo '<td>' . $linhas['email'] . '</td>';
+                        ?>
+                        <td>
+                            <a href="administrativo.php?link=7&id=<?php echo $linhas['id_pessoa']; ?>">
+                                <button type="button" class="btn btn-sm btn-primary">Visualizar</button>
+                            </a>
+                            <a href="administrativo.php?link=9&id=<?php echo $linhas['id_pessoa']; ?>">
+                                <button type="button" class="btn btn-sm btn-warning">Editar</button>
+                            </a>
+                            <a href="../processamento/apg_paciente.php?id=<?php echo $linhas['id_pessoa']; ?>">
+                                <button type="button" class="btn btn-sm btn-danger">Excluir</button>
+                            </a>
                         </td>
                         <?php
                         echo '</tr>';

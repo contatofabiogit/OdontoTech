@@ -16,7 +16,7 @@ $resultado1 = mysql_fetch_assoc($result1);
         include_once '../padroes/cabecalho_head.php';
         ?>
 
-        <title>OdontoTech - Editar Dentista</title>
+        <title>OdontoTech - Editar Funcionário</title>
         <!-- Location-->
         <link rel="stylesheet" href="../css/main-admin.css">
         <link rel="stylesheet" href="../css/main-hover.css">
@@ -42,7 +42,7 @@ $resultado1 = mysql_fetch_assoc($result1);
     <body>
         <div class="container">
             <br>
-            <header>Sistema Odontológico - Editar Dentista</header>
+            <header>Sistema Odontológico - Editar Funcionário</header>
             <?php
             include_once '../padroes/cabecalho_body.php';
             ?>

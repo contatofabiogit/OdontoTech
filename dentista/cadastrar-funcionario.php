@@ -7,7 +7,7 @@
         include_once '../padroes/cabecalho_head.php';
         ?>
 
-        <title>OdontoTech - Cadastrar Dentista</title>
+        <title>OdontoTech - Cadastrar Funcionário</title>
         <!-- Location-->
         <link rel="stylesheet" href="../css/main-admin.css">
         <link rel="stylesheet" href="../css/main-hover.css">
@@ -45,7 +45,7 @@
     <body>
         <div class="container">
             <br>
-            <header>Sistema Odontológico - Cadastrar Dentista</header>
+            <header>Sistema Odontológico - Cadastrar Funcionário</header>
             <?php
             include_once '../padroes/cabecalho_body.php';
             ?>

@@ -81,7 +81,7 @@ $resultado2 = mysql_fetch_assoc($result2);
                     <div class="form-group text-left col-md-3">
                         <label name="senha">Confirmação de Senha</label>
                         <br>
-                        <input type="password" class="form-control" name="csenha" id="senha" placeholder="Senha" value="<?php echo $resultado1['senha'];?>" required/>
+                        <input type="password" class="form-control" name="csenha" id="senha" placeholder="Senha" value="<?php echo $resultado1['senha']; ?>" required/>
                     </div>                    
                     <div class="form-group text-left col-md-3">
                         <label name="telefone">Telefone</label>
@@ -180,7 +180,7 @@ $resultado2 = mysql_fetch_assoc($result2);
 
                         <div class="btn col-md-2">
                             <button class="btn">
-                                <a href="../processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow" data-toggle="modal" data-target="#Modal-Excluir">
+                                <a href="../processamento/apg_dentista.php?id=<?php echo $resultado1['id_pessoa']; ?>" class="hvr-float-shadow">
                                     <img src="../images/botao-excluir-render.png" class="limpar">
                                     <br>
                                     <label name="limpar">Excluir</label>
