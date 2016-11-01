@@ -51,7 +51,7 @@
             ?>
 
             <br>
-            <form method="POST" action="../processamento/cd_dentista.php">
+            <form method="POST" action="../processamento/cd_receita.php">
                 <?php
                 $resultado = mysql_query("SELECT * FROM pessoa WHERE nivel_acesso = 'Paciente'");
                 $linhas = mysql_num_rows($resultado);
@@ -112,7 +112,7 @@
                     <div class="salvarPrincipal col-md-6 text-center">
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="../processamento/cd_dentista.php" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>

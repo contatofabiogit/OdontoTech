@@ -66,7 +66,7 @@
                     <div class="form-group text-left col-md-6">
                         <label>Horário</label>
                         <br>
-                        <input type="time" name="horario" class="form-control" id="horario" placeholder="Hora" required/>
+                        <input type="time" name="hora" class="form-control" id="hora" placeholder="Hora" required/>
                     </div>
 
                     <div class="form-group text-left col-md-6">
@@ -76,7 +76,7 @@
                             <?php
                             while ($linhas = mysql_fetch_array($resultado)) {
                                 ?>
-                                <option value="<?php echo $linhas['id_pessoa']; ?> "><?php echo $linhas['nome']; ?></option>
+                                <option value="<?php echo $linhas['id_pessoa'];?>"><?php echo $linhas['nome']; ?></option>
                                 <?php
                             }
                             ?>
@@ -93,9 +93,9 @@
                         <select class="form-control" id="procedimento" name="procedimento" required>
                             <?php
                             while ($linhas2 = mysql_fetch_array($resultado)) {
-                                ?>
-                                <option value="<?php echo $linhas2['id_procedimento']; ?> "><?php echo $linhas2['tipo']; ?></option>
-                                <?php
+                            ?>
+                                <option value="<?php echo $linhas2['id_procedimento'];?>"><?php echo $linhas2['tipo']; ?></option>
+                            <?php
                             }
                             ?>
                         </select>
@@ -111,9 +111,9 @@
                         <select class="form-control" id="dentista" name="dentista" required>
                             <?php
                             while ($linhas3 = mysql_fetch_array($resultado)) {
-                                ?>
-                                <option value="<?php echo $linhas3['id_pessoa']; ?> "><?php echo $linhas3['nome']; ?></option>
-                                <?php
+                            ?>
+                                <option value="<?php echo $linhas3['id_pessoa']; ?>"><?php echo $linhas3['nome']; ?></option>
+                            <?php
                             }
                             ?>
                         </select>
@@ -130,7 +130,7 @@
                     <div class="salvarPrincipal col-md-6 text-center">
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="../processamento/cd_agendamento.php" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>

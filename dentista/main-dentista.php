@@ -164,13 +164,13 @@
                 </div>
                 <!-- Fim div procedimento -->
                 
-                <!-- Início div procedimento -->
+                <!-- Início div prontuário -->
                 <div class="col-md-3 text-center col-centered">
                     <a href="administrativo.php?link=20" class="hvr-shutter-out-horizontal">
-                        <img src="../images/procedimento-render.png" class="procedimento" alt="procedimento" onmouseover="this.src = '../images/procedimento-render-onmouse.png'" onmouseout="this.src = '../images/procedimento-render.png'">
+                        <img src="../images/cadastrar-prontuario-render.png" class="procedimento" alt="procedimento" onmouseover="this.src = '../images/cadastrar-prontuario-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-prontuario-render.png'">
                     </a>
                 </div>
-                <!-- Fim div procedimento -->
+                <!-- Fim div prontuário -->
 
             </div>
             <!-- Fim div menus -->
