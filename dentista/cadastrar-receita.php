@@ -7,7 +7,7 @@
         include_once '../padroes/cabecalho_head.php';
         ?>
 
-        <title>OdontoTech - Cadastrar Dentista</title>
+        <title>OdontoTech - Cadastrar Receuta</title>
         <!-- Location-->
         <link rel="stylesheet" href="../css/main-admin.css">
         <link rel="stylesheet" href="../css/main-hover.css">
@@ -52,27 +52,55 @@
 
             <br>
             <form method="POST" action="../processamento/cd_dentista.php">
+                <?php
+                $resultado = mysql_query("SELECT * FROM pessoa WHERE nivel_acesso = 'Paciente'");
+                $linhas = mysql_num_rows($resultado);
+                ?>
                 <div class="row form-group text-left">
                     <div class="form-group text-left col-md-6">
-                        <label>Paciente</label>
+                        <label name="text">Paciente</label>
                         <br>
-                        <input type="text" name="paciente" class="form-control" id="paciente" placeholder="Paciente" required/>
+                        <select class="form-control" id="paciente" name="paciente" required>
+                            <?php
+                            while ($linhas = mysql_fetch_array($resultado)) {
+                                ?>
+                                <option value="<?php echo $linhas['id_pessoa']; ?> "><?php echo $linhas['nome']; ?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
                     </div>
+                    
+                    <?php
+                    $resultado = mysql_query("SELECT * FROM procedimento");
+                    $linhas2 = mysql_num_rows($resultado);
+                    ?>
                     <div class="form-group text-left col-md-6">
-                        <label>Procedimento</label>
+                        <label name="text">Procedimento</label>
                         <br>
-                        <input type="text" name="procedimento" class="form-control" id="procedimento" placeholder="Procedimento" required/>
+                        <select class="form-control" id="procedimento" name="procedimento" required>
+                            <?php
+                            while ($linhas2 = mysql_fetch_array($resultado)) {
+                                ?>
+                                <option value="<?php echo $linhas2['id_procedimento']; ?> "><?php echo $linhas2['tipo']; ?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
                     </div>
+                    
                     <div class="form-group text-left col-md-6">
                         <label>Desconto</label>
                         <br>
                         <input type="text" name="desconto" class="form-control" id="desconto" placeholder="Desconto" required/>
                     </div>
+                   
                     <div class="form-group text-left col-md-6">
                         <label>Data de Pagamento</label>
                         <br>
                         <input type="date" name="dt_pagamento" class="form-control" id="dt_pagamento" placeholder="Data de Pagamento" required onkeypress="mascara(this, '#####')" maxlength="5"/>
                     </div>
+                    
                 </div>
                 <div class="row">
                     <div class="homePrincipal col-md-4 text-center ">

@@ -51,7 +51,7 @@
             ?>
 
             <br>
-            <form method="POST" action="">
+            <form method="POST" action="../processamento/cd_agendamento.php">
                 <?php
                 $resultado = mysql_query("SELECT * FROM pessoa WHERE nivel_acesso = 'Paciente'");
                 $linhas = mysql_num_rows($resultado);
@@ -66,7 +66,7 @@
                     <div class="form-group text-left col-md-6">
                         <label>Horário</label>
                         <br>
-                        <input type="time" name="data" class="form-control" id="data" placeholder="Hora" required/>
+                        <input type="time" name="horario" class="form-control" id="horario" placeholder="Hora" required/>
                     </div>
 
                     <div class="form-group text-left col-md-6">
@@ -130,7 +130,7 @@
                     <div class="salvarPrincipal col-md-6 text-center">
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a href="../processamento/cd_agendamento.php" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>
