@@ -163,6 +163,14 @@
                     </a>
                 </div>
                 <!-- Fim div procedimento -->
+                
+                <!-- Início div procedimento -->
+                <div class="col-md-3 text-center col-centered">
+                    <a href="administrativo.php?link=20" class="hvr-shutter-out-horizontal">
+                        <img src="../images/procedimento-render.png" class="procedimento" alt="procedimento" onmouseover="this.src = '../images/procedimento-render-onmouse.png'" onmouseout="this.src = '../images/procedimento-render.png'">
+                    </a>
+                </div>
+                <!-- Fim div procedimento -->
 
             </div>
             <!-- Fim div menus -->

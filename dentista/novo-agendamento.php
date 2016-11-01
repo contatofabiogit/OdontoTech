@@ -51,33 +51,74 @@
             ?>
 
             <br>
-            <form method="POST" action="../processamento/cd_dentista.php">
+            <form method="POST" action="">
+                <?php
+                $resultado = mysql_query("SELECT * FROM pessoa WHERE nivel_acesso = 'Paciente'");
+                $linhas = mysql_num_rows($resultado);
+                ?>
                 <div class="row form-group text-left">
                     <div class="form-group text-left col-md-6">
                         <label>Data</label>
                         <br>
-                        <input type="time" name="hora" class="form-control" id="hora" placeholder="Hora" required/>
+                        <input type="date" name="data" class="form-control" id="data" placeholder="Hora" required/>
                     </div>
+                    
                     <div class="form-group text-left col-md-6">
-                        <label>Paciente</label>
+                        <label>Horário</label>
                         <br>
-                        <input type="time" name="hora" class="form-control" id="hora" placeholder="Hora" required/>
+                        <input type="time" name="data" class="form-control" id="data" placeholder="Hora" required/>
                     </div>
+
                     <div class="form-group text-left col-md-6">
-                        <label>Procedimento</label>
+                        <label name="text">Paciente</label>
                         <br>
-                        <input type="text" name="procedimento" class="form-control" id="procedimento" placeholder="Procedimento" required/>
+                        <select class="form-control" id="paciente" name="paciente" required>
+                            <?php
+                            while ($linhas = mysql_fetch_array($resultado)) {
+                                ?>
+                                <option value="<?php echo $linhas['id_pessoa']; ?> "><?php echo $linhas['nome']; ?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
                     </div>
+
+                    <?php
+                    $resultado = mysql_query("SELECT * FROM procedimento");
+                    $linhas2 = mysql_num_rows($resultado);
+                    ?>
                     <div class="form-group text-left col-md-6">
-                        <label>Desconto</label>
+                        <label name="text">Procedimento</label>
                         <br>
-                        <input type="text" name="desconto" class="form-control" id="desconto" placeholder="Desconto" required/>
+                        <select class="form-control" id="procedimento" name="procedimento" required>
+                            <?php
+                            while ($linhas2 = mysql_fetch_array($resultado)) {
+                                ?>
+                                <option value="<?php echo $linhas2['id_procedimento']; ?> "><?php echo $linhas2['tipo']; ?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
                     </div>
+                    
+                    <?php
+                    $resultado = mysql_query("SELECT * FROM pessoa WHERE nivel_acesso = 'Dentista'");
+                    $linhas3 = mysql_num_rows($resultado);
+                    ?>
                     <div class="form-group text-left col-md-6">
-                        <label>Data de Pagamento</label>
+                        <label name="text">Dentista</label>
                         <br>
-                        <input type="date" name="dt_pagamento" class="form-control" id="dt_pagamento" placeholder="Data de Pagamento" required onkeypress="mascara(this, '#####')" maxlength="5"/>
+                        <select class="form-control" id="dentista" name="dentista" required>
+                            <?php
+                            while ($linhas3 = mysql_fetch_array($resultado)) {
+                                ?>
+                                <option value="<?php echo $linhas3['id_pessoa']; ?> "><?php echo $linhas3['nome']; ?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
                     </div>
+
                 </div>
                 <div class="row">
                     <div class="homePrincipal col-md-4 text-center ">
@@ -89,7 +130,7 @@
                     <div class="salvarPrincipal col-md-6 text-center">
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="../processamento/cd_dentista.php" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a href="" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>

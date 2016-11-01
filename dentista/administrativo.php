@@ -35,6 +35,8 @@ $pag[18] = './relatorio-receita.php';
 
 $pag[19] = './cadastrar-procedimento.php';
 
+$pag[20] = './cadastrar-prontuario.php';
+
 
 if (!empty($link)) {
     if (file_exists($pag[$link])) {

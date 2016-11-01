@@ -51,7 +51,7 @@
             ?>
 
             <br>
-            <form method="POST" action="../processamento/cd_dentista.php">
+            <form method="POST" action="../processamento/cd_procedimento.php">
                 <div class="row form-group text-left">
                     <div class="form-group text-left col-md-6">
                         <label>Tipo Procedimento</label>
@@ -79,7 +79,7 @@
                     <div class="salvarPrincipal col-md-6 text-center">
                         <div class="btn col-md-2">
                             <button type="submit" class="btn">
-                                <a href="../processamento/cd_dentista.php" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
+                                <a href="../processamento/cd_procedimento.php" type="submit" class="hvr-float-shadow"><img src="../images/botao-salvar-render.png" class="salvar">
                                     <br>
                                     <label name="salvar">Salvar</label>
                                 </a>
