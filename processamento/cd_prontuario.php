@@ -14,6 +14,6 @@ if (($dt_cadastro == "") && ($paciente == "")) {
 } else {
     $query1 = mysql_query("INSERT INTO prontuario VALUES ('', '$dt_cadastro', '$paciente')");
     
-    header("Location: ../dentista/administrativo.php?link=1");
+    header("Location: ../dentista/administrativo.php?link=21");
 }
 ?>

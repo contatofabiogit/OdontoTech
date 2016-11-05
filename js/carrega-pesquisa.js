@@ -5,6 +5,7 @@
  */
 
 
+
 $(function () {
     //pesquisar sem refresh
     $("#fixed-header-drawer-exp").keyup(function () {
@@ -20,7 +21,7 @@ $(function () {
             });
         } else {
             $.ajax({
-                url: '../js/busca-sem-refresh-paciente.php',
+                url: '../processamento/busca-sem-refresh-paciente.php',
                 type: 'POST',
                 dataType: 'html',
                 success: function (data) {

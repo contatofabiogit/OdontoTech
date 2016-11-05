@@ -36,6 +36,9 @@ $pag[18] = './relatorio-receita.php';
 $pag[19] = './cadastrar-procedimento.php';
 
 $pag[20] = './cadastrar-prontuario.php';
+$pag[21] = './editar_prontuario.php';
+$pag[22] = './buscar_prontuario.php';
+$pag[23] = './visualizar_prontuario.php';
 
 
 if (!empty($link)) {

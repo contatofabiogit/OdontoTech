@@ -158,16 +158,45 @@
 
                 <!-- Início div procedimento -->
                 <div class="col-md-3 text-center col-centered">
-                    <a href="administrativo.php?link=19" class="hvr-shutter-out-horizontal">
+                    <a href="administrativo.php?link=19" class="hvr-shutter-out-horizontal" >
                         <img src="../images/procedimento-render.png" class="procedimento" alt="procedimento" onmouseover="this.src = '../images/procedimento-render-onmouse.png'" onmouseout="this.src = '../images/procedimento-render.png'">
                     </a>
                 </div>
                 <!-- Fim div procedimento -->
-                
+
                 <!-- Início div prontuário -->
                 <div class="col-md-3 text-center col-centered">
-                    <a href="administrativo.php?link=20" class="hvr-shutter-out-horizontal">
-                        <img src="../images/cadastrar-prontuario-render.png" class="procedimento" alt="procedimento" onmouseover="this.src = '../images/cadastrar-prontuario-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-prontuario-render.png'">
+                    <a class="hvr-shutter-out-horizontal" data-toggle="modal" data-target="#Modal-Prontuario"><img src="../images/cadastrar-prontuario-render.png" class="procedimento" alt="procedimento" onmouseover="this.src = '../images/cadastrar-prontuario-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-prontuario-render.png'"> </a>
+
+                        <!-- Início Modal Usuário-->
+                        <div class="modal fade" id="Modal-Prontuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Cadastrar</h4> </div>
+                                    <div class="modal-body">
+                                        <div class="modal-container">
+                                            <div class="row row-centered">
+                                                <div class="col-md-4 col-centered text-center dentista">
+                                                    <a href="administrativo.php?link=2" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/cadastrar-dentista-render.png" class="cadastrar" alt="cadastrar" onmouseover="this.src = '../images/cadastrar-dentista-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-dentista-render.png'"> </a>
+                                                </div>
+                                                <div class="col-md-4 col-centered text-center paciente">
+                                                    <a href="administrativo.php?link=6" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/cadastrar-paciente-render.png" class="cadastrar" alt="cadastrar" onmouseover="this.src = '../images/cadastrar-paciente-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-paciente-render.png'"> </a>
+                                                </div>
+                                                <div class="col-md-4 col-centered text-center funcionarios">
+                                                    <a href="administrativo.php?link=10" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/cadastrar-funcionarios-render.png" class="cadastrar" alt="cadastrar" onmouseover="this.src = '../images/cadastrar-funcionarios-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-funcionarios-render.png'"> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Modal Usuário-->
                     </a>
                 </div>
                 <!-- Fim div prontuário -->

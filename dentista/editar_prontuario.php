@@ -1,3 +1,16 @@
+<?php
+$id = $_GET['id'];
+
+//Executando consulta sql
+$result1 = mysql_query("SELECT * FROM pessoa WHERE id_pessoa='$id' LIMIT 1");
+//$result2 = mysql_query("SELECT * FROM prontuario WHERE paciente_id_paciente ='$id' LIMIT 1");
+$result2 =  mysql_query("SELECT a.*, b.nome FROM prontuario a INNER JOIN pessoa b ON a.paciente_id_paciente = b.id_pessoa WHERE paciente_id_paciente = '$id' LIMIT 1");
+
+$resultado1 = mysql_fetch_assoc($result1);
+$resultado2 = mysql_fetch_assoc($result2);
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -51,34 +64,30 @@
             ?>
 
             <br>
-            <form method="POST" action="../processamento/cd_prontuario.php">
-
-
-                <?php
-                $resultado = mysql_query("SELECT * FROM pessoa WHERE nivel_acesso = 'Paciente'");
-                $linhas = mysql_num_rows($resultado);
-                ?>
+            <form method="POST" action="../processamento/cd_prontuario.php">                
                 <div class="row form-group text-left">
                     <div class="form-group text-left col-md-3">
                         <label>Data de Cadastro</label>
                         <br>
-                        <input type="date" name="dt_cadastro" class="form-control" id="dt_cadastro" required/>
+                        <input type="text" name="dt_cadastro" class="form-control" id="dt_cadastro" required value="<?php echo $resultado2['dt_cadastro'];?>" disabled/>
                     </div>
-
+                    
                     <div class="form-group text-left col-md-6">
                         <label name="text">Paciente</label>
                         <br>
-                        <select class="form-control" id="paciente" name="paciente" required>
+                        <select class="form-control" id="paciente" name="paciente" disabled>
                             <?php
                             while ($linhas = mysql_fetch_array($resultado)) {
                                 ?>
-                                <option value="<?php echo $linhas['id_pessoa']; ?> "><?php echo $linhas['id_pessoa'];?> - <?php echo $linhas['nome']; ?></option>
+                                <option value="<?php echo $resultado1['id_pessoa']; ?> "><?php echo $resultado1['id_pessoa'];?> - <?php echo $resultado1['nome']; ?></option>
                                 <?php
                             }
                             ?>
                         </select>
                     </div>
 
+                    <input type="hidden" name="id" value="<?php echo $resultado2['id_pessoa']; ?>" />
+                    
                     <!-- onkeypress="mascara(this, '## #####-####')" maxlength="14" -->
                 </div>
                 <div class="row">
