@@ -4,7 +4,7 @@ $id = $_GET['id'];
 //Executando consulta sql
 $result1 = mysql_query("SELECT * FROM pessoa WHERE id_pessoa='$id' LIMIT 1");
 //$result2 = mysql_query("SELECT * FROM prontuario WHERE paciente_id_paciente ='$id' LIMIT 1");
-$result2 =  mysql_query("SELECT a.*, b.nome FROM prontuario a INNER JOIN pessoa b ON a.paciente_id_paciente = b.id_pessoa WHERE paciente_id_paciente = '$id' LIMIT 1");
+$result2 = mysql_query("SELECT a.*, b.nome FROM prontuario a INNER JOIN pessoa b ON a.paciente_id_paciente = b.id_pessoa WHERE paciente_id_paciente = '$id' LIMIT 1");
 
 $resultado1 = mysql_fetch_assoc($result1);
 $resultado2 = mysql_fetch_assoc($result2);
@@ -64,32 +64,51 @@ $resultado2 = mysql_fetch_assoc($result2);
             ?>
 
             <br>
-            <form method="POST" action="../processamento/cd_prontuario.php">                
-                <div class="row form-group text-left">
-                    <div class="form-group text-left col-md-3">
-                        <label>Data de Cadastro</label>
-                        <br>
-                        <input type="text" name="dt_cadastro" class="form-control" id="dt_cadastro" required value="<?php echo $resultado2['dt_cadastro'];?>" disabled/>
-                    </div>
-                    
-                    <div class="form-group text-left col-md-6">
-                        <label name="text">Paciente</label>
-                        <br>
-                        <select class="form-control" id="paciente" name="paciente" disabled>
-                            <?php
-                            while ($linhas = mysql_fetch_array($resultado)) {
-                                ?>
-                                <option value="<?php echo $resultado1['id_pessoa']; ?> "><?php echo $resultado1['id_pessoa'];?> - <?php echo $resultado1['nome']; ?></option>
-                                <?php
-                            }
-                            ?>
-                        </select>
-                    </div>
+            <form method="POST" action="">                
+                <div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Tabela de Agendamentos</div>
+                        <?php
+                        $qtd_linhas = mysql_query("SELECT a.*, b.* FROM agenda a
+                                                       INNER JOIN pessoa b  ON a.pessoa_id_pessoa = b.id_pessoa WHERE a.pessoa_id_pessoa = a.pessoa_id_pessoa");
+                        
+                        ?>
+                        <strong>Resultado: <?php echo $i; ?></strong>
 
-                    <input type="hidden" name="id" value="<?php echo $resultado2['id_pessoa']; ?>" />
-                    
-                    <!-- onkeypress="mascara(this, '## #####-####')" maxlength="14" -->
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Id</th>
+                                <th>Data</th>
+                                <th>Procedimento</th>
+                                <th>Dentista</th>
+                            </tr>
+                            <tr>
+                                <?php
+                                echo '<td> resultado </td>';
+                                echo '<td> resultado </td>';
+                                echo '<td> resultado </td>';
+                                echo '<td> resultado </td>';
+                                ?>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
+
+                <div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Tabela de Procedimentos</div>
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Id</th>
+                                <th>Tipo</th>
+                                <th>Data da Realização</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="homePrincipal col-md-4 text-center ">
                         <a href="administrativo.php?link=1" class="hvr-grow-shadow"><img src="../images/botao-home-render.png" class="home">
