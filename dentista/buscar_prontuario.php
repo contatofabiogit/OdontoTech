@@ -84,7 +84,7 @@ $getsql = mysql_query($getpesquisa);
                             <a href="administrativo.php?link=23&id=<?php echo $linhas['id_prontuario']; ?>">
                                 <button type="button" class="btn btn-sm btn-primary">Visualizar</button>
                             </a>
-                            <a href="administrativo.php?link=21&id=<?php echo $linhas['id_prontuario']; ?>">
+                            <a href="administrativo.php?link=21&id=<?php echo $linhas['id_prontuario']; ?>&id_paciente=<?php echo $linhas['paciente_id_paciente']; ?>">
                                 <button type="button" class="btn btn-sm btn-warning">Editar</button>
                             </a>
                             <a href="../processamento/apg_prontuario.php?id=<?php echo $linhas['id_prontuario']; ?>">
@@ -94,6 +94,7 @@ $getsql = mysql_query($getpesquisa);
                         <?php
                         echo '</tr>';
                     }
+                    //var_dump($linhas);
                     ?>
                     </tbody>
                 </table>
