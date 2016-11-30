@@ -61,6 +61,7 @@ $getsql = mysql_query($getpesquisa);
 
             <div class="table-responsive">
                 <table class="table table-striped table-hover resultado">
+                    <td>PDF</td>
                     <td>Id</td>
                     <td>Data de Cadastro</td>
                     <td>Nome</td>
@@ -71,6 +72,8 @@ $getsql = mysql_query($getpesquisa);
 
                             echo '<tr>';
                             ?>
+                        <td><input type="radio" value="<?php $linhas['id_prontuario'] ?>"></td>
+
                         <?php
                         echo '<td>' . $linhas['id_prontuario'] . '</td>';
                         echo '<td>' . $linhas['dt_cadastro'] . '</td>';
@@ -78,8 +81,14 @@ $getsql = mysql_query($getpesquisa);
                         
                         ?>
                         <td>
-                            <a href="administrativo.php?link=21&id=<?php echo $linhas['id_prontuario']; ?>&id_paciente=<?php echo $linhas['paciente_id_paciente']; ?>">
+                            <a href="administrativo.php?link=23&id=<?php echo $linhas['id_prontuario']; ?>">
                                 <button type="button" class="btn btn-sm btn-primary">Visualizar</button>
+                            </a>
+                            <a href="administrativo.php?link=21&id=<?php echo $linhas['id_prontuario']; ?>&id_paciente=<?php echo $linhas['paciente_id_paciente']; ?>">
+                                <button type="button" class="btn btn-sm btn-warning">Editar</button>
+                            </a>
+                            <a href="../processamento/apg_prontuario.php?id=<?php echo $linhas['id_prontuario']; ?>">
+                                <button type="button" class="btn btn-sm btn-danger">Excluir</button>
                             </a>
                         </td>
                         <?php

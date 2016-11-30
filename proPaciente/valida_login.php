@@ -3,7 +3,10 @@ session_start();
 $usuariot = $_POST['login'];
 $senhat = $_POST['senha'];
 
+//$_SESSION['pessoaId'] = $resultado['id_pessoa'];;
+
 include_once './conexao.php';
+$id = $_SESSION['pessoaId'];
 
 $result = mysql_query("SELECT * FROM pessoa WHERE login = '$usuariot' AND senha = '$senhat' LIMIT 1");
 $resultado = mysql_fetch_assoc($result);
@@ -33,11 +36,11 @@ if(empty($resultado)){
     if($_SESSION['pessoaNivelAcesso'] == 'Dentista'){
         header("Location: ../dentista/administrativo.php?link=1");
     }else if($_SESSION['pessoaNivelAcesso'] == 'Assistente'){
-        header("Location: ../dentista/main-assistente.php");
+        header("Location: ../dentista/administrativo.php?link=23");
     }else if($_SESSION['pessoaNivelAcesso'] == 'Atendente'){
-        header("Location: ../dentista/main-atendente.php");
+        header("Location: ../dentista/administrativo.php?link=24");
     }else if($_SESSION['pessoaNivelAcesso'] == 'Paciente'){
-        header("Location: ../paciente/main-paciente.php");
+        header("Location: ../paciente/paciente.php?link=3");
     }
 }
 ?>

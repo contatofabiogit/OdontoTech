@@ -37,39 +37,6 @@ session_start();
                     <div class="iconInput"> <i class="glyphicon glyphicon-lock"></i>
                         <input type="password" name="senha" class="form-control" placeholder="Senha" required/> </div>
                     <br>
-                    <div class="esqueceSenha">
-                        <a href="#" data-toggle="modal" data-target="#myModal">Esqueceu sua senha?</a>
-
-                        <!-- Início Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Encontre sua conta do OdontoTech</h4>
-                                    </div>
-                                    <div class="modal-body">
-
-                                        <div class="modal-container">
-                                            <div class="row">
-                                                <span class="text-center">
-                                                    Informe-nos:
-                                                </span>
-                                                <div class="text-left">
-                                                    <li>Endereço de e-mail para recuperação de conta;</li>
-                                                    <li>Ou seu e-mail.</li>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-success">Enviar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Fim Modal -->
 
                     </div>
                     <br>

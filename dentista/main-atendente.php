@@ -37,14 +37,8 @@
                                 <div class="modal-body">
                                     <div class="modal-container">
                                         <div class="row row-centered">
-                                            <div class="col-md-4 col-centered text-center dentista">
-                                                <a href="administrativo.php?link=2" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/cadastrar-dentista-render.png" class="cadastrar" alt="cadastrar" onmouseover="this.src = '../images/cadastrar-dentista-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-dentista-render.png'"> </a>
-                                            </div>
-                                            <div class="col-md-4 col-centered text-center paciente">
+                                            <div class="col-md-12 col-centered text-center paciente">
                                                 <a href="administrativo.php?link=6" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/cadastrar-paciente-render.png" class="cadastrar" alt="cadastrar" onmouseover="this.src = '../images/cadastrar-paciente-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-paciente-render.png'"> </a>
-                                            </div>
-                                            <div class="col-md-4 col-centered text-center funcionarios">
-                                                <a href="administrativo.php?link=10" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/cadastrar-funcionarios-render.png" class="cadastrar" alt="cadastrar" onmouseover="this.src = '../images/cadastrar-funcionarios-render-onmouse.png'" onmouseout="this.src = '../images/cadastrar-funcionarios-render.png'"> </a>
                                             </div>
                                         </div>
                                     </div>
@@ -74,14 +68,8 @@
                                 <div class="modal-body">
                                     <div class="modal-container">
                                         <div class="row row-centered">
-                                            <div class="col-md-4 col-centered text-center dentista">
-                                                <a href="administrativo.php?link=3" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-dentista-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images//buscar-dentista-render-onmouse.png'" onmouseout="this.src = '../images/buscar-dentista-render.png'"> </a>
-                                            </div>
-                                            <div class="col-md-4 col-centered text-center paciente">
+                                            <div class="col-md-12 col-centered text-center paciente">
                                                 <a href="administrativo.php?link=8" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-paciente-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images/buscar-paciente-render-onmouse.png'" onmouseout="this.src = '../images/buscar-paciente-render.png'"> </a>
-                                            </div>
-                                            <div class="col-md-4 col-centered text-center funcionarios">
-                                                <a href="administrativo.php?link=11" class="hvr-shutter-out-horizontal cadastrar"> <img src="../images/buscar-funcionarios-render.png" class="buscar" alt="buscar" onmouseover="this.src = '../images/buscar-funcionarios-render-onmouse.png'" onmouseout="this.src = '../images/buscar-funcionarios-render.png'"> </a>
                                             </div>
                                         </div>
                                     </div>
@@ -96,14 +84,6 @@
 
                 </div>
                 <!-- Fim div buscar -->
-
-                <!-- Início div receita -->
-                <div class="col-md-3 text-center col-centered">
-                    <a href="administrativo.php?link=14" class="hvr-shutter-out-horizontal">
-                        <img src="../images/receita-render.png" class="receita" alt="receita financeira" onmouseover="this.src = '../images/receita-render-onmouse.png'" onmouseout="this.src = '../images/receita-render.png'">
-                    </a>
-                </div>
-                <!-- Fim div receita -->
 
                 <!-- Início div agendar -->
                 <div class="col-md-3 text-center col-centered">
@@ -127,19 +107,14 @@
                                 <div class="modal-body">
                                     <div class="modal-container">
                                         <div class="row row-centered">
-                                            <div class="col-md-4 col-centered text-center dentista">
+                                            <div class="col-md-6 col-centered text-center dentista">
                                                 <a href="administrativo.php?link=16" class="hvr-shutter-out-horizontal cadastrar">
                                                     <img src="../images/relatorio-paciente-render.png" class="relatorio" alt="relatorio" onmouseover="this.src = '../images//relatorio-paciente-render-onmouse.png'" onmouseout="this.src = '../images/relatorio-paciente-render.png'">
                                                 </a>
                                             </div>
-                                            <div class="col-md-4 col-centered text-center paciente">
+                                            <div class="col-md-6 col-centered text-center paciente">
                                                 <a href="administrativo.php?link=17" class="hvr-shutter-out-horizontal cadastrar">
                                                     <img src="../images/relatorio-procedimento-render.png" class="relatorio" alt="relatorio" onmouseover="this.src = '../images/relatorio-procedimento-render-onmouse.png'" onmouseout="this.src = '../images/relatorio-procedimento-render.png'">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-4 col-centered text-center funcionarios">
-                                                <a href="administrativo.php?link=18" class="hvr-shutter-out-horizontal cadastrar">
-                                                    <img src="../images/relatorio-receita-render.png" class="relatorio" alt="relatorio" onmouseover="this.src = '../images/relatorio-receita-render-onmouse.png'" onmouseout="this.src = '../images/relatorio-receita-render.png'">
                                                 </a>
                                             </div>
                                         </div>
@@ -155,14 +130,6 @@
 
                 </div>
                 <!-- Fim div relatório -->
-
-                <!-- Início div procedimento -->
-                <div class="col-md-3 text-center col-centered">
-                    <a href="administrativo.php?link=19" class="hvr-shutter-out-horizontal" >
-                        <img src="../images/procedimento-render.png" class="procedimento" alt="procedimento" onmouseover="this.src = '../images/procedimento-render-onmouse.png'" onmouseout="this.src = '../images/procedimento-render.png'">
-                    </a>
-                </div>
-                <!-- Fim div procedimento -->
 
                 <!-- Início div prontuário -->
                 <div class="col-md-3 text-center col-centered">

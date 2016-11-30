@@ -20,7 +20,7 @@ $resultado2 = mysql_fetch_assoc($result2);
         include_once '../padroes/cabecalho_head.php';
         ?>
 
-        <title>OdontoTech - Visualizar Prontuário</title>
+        <title>OdontoTech - Editar Prontuário</title>
         <!-- Location-->
         <link rel="stylesheet" href="../css/main-admin.css">
         <link rel="stylesheet" href="../css/cadastrar-dentista.css">
@@ -30,7 +30,7 @@ $resultado2 = mysql_fetch_assoc($result2);
     <body>
         <div class="container">
             <br>
-            <header>Sistema Odontológico - Visualizar Prontuário</header>
+            <header>Sistema Odontológico - Editar Prontuário</header>
             <?php
             include_once '../padroes/cabecalho_body.php';
             ?>
@@ -78,13 +78,13 @@ $resultado2 = mysql_fetch_assoc($result2);
                     </a>
                 </div>
             </div>
-
-
-            <?php
-            include_once '../padroes/rodape_body.php';
-            ?>
-
         </div>
-    </body>
+
+        <?php
+        include_once '../padroes/rodape_body.php';
+        ?>
+
+    </div>
+</body>
 
 </html>

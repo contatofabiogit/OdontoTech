@@ -69,7 +69,7 @@
                                 <br>
                                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" required/>
                             </div>
-
+                            
                             <div class="form-group text-left col-md-3">
                                 <label name="telefone">Telefone</label>
                                 <br>
@@ -249,114 +249,8 @@
                             </div>
                         </div>
 
-                        <div role="tabpanel" class="row" id="anamnese">
-                            <div class="form-group text-left col-md-7">
-                                <label>PERGUNTA 01: </label>
-                                <span>Sofre de alguma doença:</span>
-                                <select class="form-control" name="pergunta01">
-                                    <option value=""></option>
-                                    <option value="Sim">Sim</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                            </div>
-                            <div class="form-group text-left col-md-5">
-                                <span>Qual(ais):</span>
-                                <input type="text" class="form-control" name="rep01"/>
-                            </div>
-                        </div>
-
-                        <div role="tabpanel" class="row" id="anamnese">
-                            <div class="form-group text-left col-md-7">
-                                <label>PERGUNTA 02: </label>
-                                <span>Está em tratamento médico atualmente?</span>
-                                <select class="form-control" name="pergunta01">
-                                    <option value=""></option>
-                                    <option value="Sim">Sim</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                            </div>
-                            <div class="form-group text-left col-md-5">
-                                <span>Qual(ais):</span>
-                                <input type="text" class="form-control" name="rep01"/>
-                            </div>
-                        </div>
-
-                        <div role="tabpanel" class="row" id="anamnese">
-                            <div class="form-group text-left col-md-7">
-                                <label>PERGUNTA 03: </label>
-                                <span>Está fazendo uso de alguma medicação?</span>
-                                <select class="form-control" name="pergunta01">
-                                    <option value=""></option>
-                                    <option value="Sim">Sim</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                            </div>
-                            <div class="form-group text-left col-md-5">
-                                <span>Qual(ais):</span>
-                                <input type="text" class="form-control" name="rep01"/>
-                            </div>
-                        </div>
-
-                        <div role="tabpanel" class="row" id="anamnese">
-                            <div class="form-group text-left col-md-7">
-                                <label>PERGUNTA 04: </label>
-                                <span>Teve gravidez?</span>
-                                <select class="form-control" name="pergunta01">
-                                    <option value=""></option>
-                                    <option value="Sim">Sim</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                            </div>
-                            <div class="form-group text-left col-md-5">
-                                <input type="hidden" class="form-control" name="rep01"/>
-                            </div>
-                        </div>
-
-                        <div role="tabpanel" class="row" id="anamnese">
-                            <div class="form-group text-left col-md-7">
-                                <label>PERGUNTA 05: </label>
-                                <span>Teve alergia?</span>
-                                <select class="form-control" name="pergunta01">
-                                    <option value=""></option>
-                                    <option value="Sim">Sim</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                            </div>
-                            <div class="form-group text-left col-md-5">
-                                <input type="hidden" class="form-control" name="rep01"/>
-                            </div>
-                        </div>
-
-                        <div role="tabpanel" class="row" id="anamnese">
-                            <div class="form-group text-left col-md-7">
-                                <label>PERGUNTA 06: </label>
-                                <span>Já foi operado?</span>
-                                <select class="form-control" name="pergunta01">
-                                    <option value=""></option>
-                                    <option value="Sim">Sim</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                            </div>
-                            <div class="form-group text-left col-md-5">
-                                <span>Motivo:</span>
-                                <input type="text" class="form-control" name="rep01"/>
-                            </div>
-                        </div>
-
-                        <div role="tabpanel" class="row" id="anamnese">
-                            <div class="form-group text-left col-md-7">
-                                <label>PERGUNTA 07: </label>
-                                <span>Teve problemas com a cicatrização?</span>
-                                <select class="form-control" name="pergunta01">
-                                    <option value=""></option>
-                                    <option value="Sim">Sim</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                            </div>
-                            <div class="form-group text-left col-md-5">
-                                <span>Motivo:</span>
-                                <input type="text" class="form-control" name="rep01"/>
-                            </div>
+                        <div role="tabpanel" class="tab-pane" id="anamnese">
+                            Anamnese
                         </div>
                     </div>
 

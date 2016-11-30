@@ -13,7 +13,7 @@ $getsql = mysql_query($getpesquisa);
         include_once '../padroes/cabecalho_head.php';
         ?>
 
-        <title>OdontoTech - Buscar Prontuário</title>
+        <title>OdontoTech - Buscar Dentista</title>
         <link rel="stylesheet" href="../css/main-hover.css">
         <link rel="stylesheet" href="../css/buscar_dentista.css">
 
@@ -23,16 +23,14 @@ $getsql = mysql_query($getpesquisa);
 
     <body>
         <?php
-        $resultado = mysql_query("SELECT a.*, b.nome FROM prontuario a INNER JOIN pessoa b ON a.paciente_id_paciente = b.id_pessoa");
-        //$resultado = mysql_query("SELECT * FROM prontuario");
+        $resultado = mysql_query("SELECT * FROM pessoa WHERE nivel_acesso = 'Paciente'");
         $linhas = mysql_num_rows($resultado);
-        
         ?>
         <div class="container">
             <br>
 
             <div class="row cabecalhoP">
-                <header>Sistema Odontológico - Buscar Prontuário</header>
+                <header>Sistema Odontológico - Buscar Paciente</header>
                 <?php
                 include_once '../padroes/cabecalho_body.php';
                 ?>
@@ -61,9 +59,10 @@ $getsql = mysql_query($getpesquisa);
 
             <div class="table-responsive">
                 <table class="table table-striped table-hover resultado">
+                    <td>PDF</td>
                     <td>Id</td>
-                    <td>Data de Cadastro</td>
                     <td>Nome</td>
+                    <td>E-mail</td>
                     <td>Opções</td>
                     <tbody>
                         <?php
@@ -71,21 +70,27 @@ $getsql = mysql_query($getpesquisa);
 
                             echo '<tr>';
                             ?>
+                        <td><input type="radio" value="<?php $linhas['id_pessoa'] ?>"></td>
+
                         <?php
-                        echo '<td>' . $linhas['id_prontuario'] . '</td>';
-                        echo '<td>' . $linhas['dt_cadastro'] . '</td>';
+                        echo '<td>' . $linhas['id_pessoa'] . '</td>';
                         echo '<td>' . $linhas['nome'] . '</td>';
-                        
+                        echo '<td>' . $linhas['email'] . '</td>';
                         ?>
                         <td>
-                            <a href="administrativo.php?link=21&id=<?php echo $linhas['id_prontuario']; ?>&id_paciente=<?php echo $linhas['paciente_id_paciente']; ?>">
+                            <a href="administrativo.php?link=7&id=<?php echo $linhas['id_pessoa']; ?>">
                                 <button type="button" class="btn btn-sm btn-primary">Visualizar</button>
+                            </a>
+                            <a href="administrativo.php?link=9&id=<?php echo $linhas['id_pessoa']; ?>">
+                                <button type="button" class="btn btn-sm btn-warning">Editar</button>
+                            </a>
+                            <a href="../processamento/apg_paciente.php?id=<?php echo $linhas['id_pessoa']; ?>">
+                                <button type="button" class="btn btn-sm btn-danger">Excluir</button>
                             </a>
                         </td>
                         <?php
                         echo '</tr>';
                     }
-                    //var_dump($linhas);
                     ?>
                     </tbody>
                 </table>
